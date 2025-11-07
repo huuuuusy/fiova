@@ -56,6 +56,17 @@
         margin: 20px; /* Margin outside the box */
         text-align: center; /* Center the text */
     }
+    .publication-title {
+        word-break: normal !important;
+        writing-mode: horizontal-tb !important;
+        text-orientation: mixed !important;
+        white-space: normal !important;
+        display: block !important;
+    }
+    h1.publication-title {
+        line-height: 1.2 !important;
+        margin-bottom: 1rem !important;
+    }
   </style>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -70,43 +81,18 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <img src="static/images/logo_1.png" alt="FIOVA (Five-in-One Video Annotations) Benchmark" width="900"/>
-            <h1 class="title is-4 publication-title">This initiative aims to evaluate the gap between human and machine video understanding by benchmarking LVLMs against comprehensive human annotations.
-            </h1>
-            <h1 class="title is-5 publication-title">(Contact: <a href="https://huuuuusy.github.io/" target="_blank">Shiyu Hu</a>)
-            </h1>
-
-            <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-            <div class="content has-text-justified">
-            <h3 class="head-h2" style="margin-bottom: 0.5em;color: rgb(255, 93, 93)">
-              Latest News
-            </h3>
-                <!-- <li>
-                    [2024.10.22] We have updated the <a href="https://arxiv.org/abs/2410.15270" target="_blank">arXiv version</a> of the paper.
-                </li> -->
-                <li>
-                    [2025.05.15] The home page has been released! 
-                </li>
-            </div>
-            </div>
-            </div>
-            </ul>
-          </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 id="Can-LVLMs-Describe-Videos-Like-Humans" class="title is-2 publication-title">FIOVA: A Multi-Annotator Benchmark for Human-Aligned Video Captioning
+            <!-- Logo -->
+            <img src="static/images/logo_1.png"
+                 alt="FIOVA: Cognitively Grounded Group-Consensus Benchmark"
+                 width="900"/>
+  
+            <!-- Main Title -->
+            <h1 class="title is-2 publication-title">
+              Beyond Single-Reference: Toward Cognitively Grounded Group-Consensus Evaluation of LVLMs in Video Understanding
             </h1>
+  
+            <!-- Authors -->
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://huuuuusy.github.io/">Shiyu Hu*</a><sup>1</sup>,
@@ -115,69 +101,76 @@
                 <a href="https://github.com/Xuchen-Li">Xuchen Li*</a><sup>2,3,4</sup>,
               </span>
               <span class="author-block">
-                <a href="https://github.com/XuzhaoLi">Xuzhao Li</a><sup>5</sup>,
+                <a href="https://github.com/XuzhaoLi">Xuzhao Li</a><sup>1</sup>,
               </span>
               <span class="author-block">
                 Jing Zhang<sup>2</sup>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.com.hk/citations?user=nMe_kLAAAAAJ">Yipei Wang</a><sup>6</sup>,
+                <a href="https://scholar.google.com.hk/citations?user=nMe_kLAAAAAJ">Yipei Wang</a><sup>5</sup>,
               </span>
               <span class="author-block">
-                <a href="https://www.xinzhaoai.com/">Xin Zhao✉️</a><sup>7</sup>,
+                <a href="https://scholar.google.com/citations?user=v3w4IYUAAAAJ&hl">Haibin Ling</a><sup>6</sup>,
               </span>
               <span class="author-block">
-                <a href="https://dr.ntu.edu.sg/cris/rp/rp02319">Kang Hao Cheong✉️</a><sup>1,8</sup>
+                <a href="https://scholar.google.com/citations?user=V3hiob0AAAAJ&hl">Xu-Cheng Yin</a><sup>7</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.xinzhaoai.com/">Xin Zhao</a><sup>7</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://dr.ntu.edu.sg/cris/rp/rp02319">Kang Hao Cheong</a><sup>1,8</sup>
               </span>
             </div>
             
             <div class="is-size-6 publication-authors">
               <sup>1</sup>School of Physical and Mathematical Sciences, Nanyang Technological University, Singapore<br/>
-              <sup>2</sup>Institute of Automation, Chinese Academy of Sciences, China<br/>
-              <sup>3</sup>Zhongguancun Academy, Beijing, China<br/>
-              <sup>4</sup>School of Artificial Intelligence, University of Chinese Academy of Sciences, China<br/>
-              <sup>5</sup>School of Automation, Beijing Institute of Technology, China<br/>
-              <sup>6</sup>Institute of Automation, Southeast University, China<br/>
+              <sup>2</sup>Institute of Automation, Chinese Academy of Sciences, Beijing, China<br/>
+              <sup>3</sup>University of Chinese Academy of Sciences, Beijing, China<br/>
+              <sup>4</sup>Zhongguancun Academy, Beijing, China<br/>
+              <sup>5</sup>Southeast University, Jiangsu, China<br/>
+              <sup>6</sup>Department of Artificial Intelligence, Westlake University, Zhejiang, China<br/>
               <sup>7</sup>School of Computer and Communication Engineering, University of Science and Technology Beijing, China<br/>
               <sup>8</sup>College of Computing and Data Science, Nanyang Technological University, Singapore
             </div>
             
-            
-            <div class="column has-text-centered">
-              <div class="publication-links">
-
-                <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2410.15270" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-
-                <span class="link-block">
-                  <a href="https://huggingface.co/datasets/huuuuusy/FIOVA"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                        <i class="fas fa-file-archive"></i>
-                    </span>
-                    <span>Dataset</span>
-                    </a>
-                </span>
-
-
+            <!-- Publication Links -->
+            <!-- Links are commented out for now -->
+  
+            <!-- Sub Title -->
+            <h2 class="title is-5 publication-title">
+              Beyond single-reference evaluation, FIOVA models multi-annotator diversity, unified consensus groundtruth (UCG),
+              and cognitively weighted metrics (FIOVA-DQ) to diagnose the gap between human and LVLM understanding of subjective long videos.
+            </h2>
+  
+            <!-- Contact -->
+            <h2 class="title is-6 publication-title">
+              Benchmark &amp; tools maintained by
+              <a href="https://huuuuusy.github.io/" target="_blank">Shiyu Hu</a> and 
+              <a href="https://github.com/Xuchen-Li" target="_blank">Xuchen Li</a>
+            </h2>
+  
+            <!-- Latest News -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <div class="content has-text-justified">
+                  <h3 class="head-h2" style="margin-bottom: 0.5em; color: rgb(255, 93, 93);">
+                    Latest News
+                  </h3>
+                  <ul>
+                    <li>[2025.11.07] Project content and experimental analyses updated.</li>
+                    <li>[2025.05.15] Official FIOVA homepage released with dataset and cognitively grounded benchmark resources.</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <!-- <div class="is-size-5 publication-authors">
-              Published at <b><i>Proceedings of ICLR 2024</i></b>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-
+  
+          </div> <!-- column -->
+        </div> <!-- columns -->
+      </div> <!-- container -->
+    </div> <!-- hero-body -->
   </section>
+
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -198,12 +191,19 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Despite rapid progress in large vision-language models (LVLMs), existing video caption benchmarks remain limited in evaluating their alignment with human understanding. Most rely on a single annotation per video and lexical similarity-based metrics, failing to capture the variability in human perception and the cognitive importance of events. These limitations hinder accurate diagnosis of model capabilities in producing coherent, complete, and human-aligned descriptions.
-              To address this, we introduce <strong>FIOVA</strong> (<strong>F</strong>ive-<strong>I</strong>n-<strong>O</strong>ne <strong>V</strong>ideo <strong>A</strong>nnotations), a human-centric benchmark tailored for evaluation. It comprises 3,002 real-world videos (~33.6s each), each annotated independently by five annotators. This design enables modeling of semantic diversity and inter-subjective agreement, offering a richer foundation for measuring human–machine alignment.
-              We further propose <strong>FIOVA-DQ</strong>, an event-level evaluation metric that incorporates cognitive weights derived from annotator consensus, providing fine-grained assessment of event relevance and semantic coverage. Leveraging FIOVA, we conduct a comprehensive evaluation of nine representative LVLMs and introduce a complexity-aware analysis framework based on inter-annotator variation (CV). This reveals consistency gaps across difficulty levels and identifies structural issues such as event under-description and template convergence.
-              Our results highlight FIOVA’s diagnostic value for understanding LVLM behavior under varying complexity, setting a new standard for cognitively aligned evaluation in long-video captioning. The benchmark, annotations, metric, and model outputs are publicly released to support future evaluation-driven research in video understanding.
+              Evaluating large vision-language models (LVLMs) for long-video understanding remains challenging, as human interpretations of the same content differ in attention, segmentation, and expression.
             </p>
-            
+            <p>
+              This diversity highlights the limitations of traditional single-reference or lexical metrics that fail to reflect both variation and consensus in human understanding.
+            </p>
+            <p>
+              To address this issue, we propose a <strong>cognitively grounded group-consensus evaluation paradigm</strong> that models objectivity through quantified human consensus. Within this paradigm, we construct <strong>FIOVA</strong> (<strong>F</strong>ive-<strong>I</strong>n-<strong>O</strong>ne <strong>V</strong>ideo <strong>A</strong>nnotations), a benchmark of 3,002 medium-to long-duration videos, each annotated by five humans to represent distinct cognitive perspectives. Through a <strong>Unified Consensus Groundtruth (UCG)</strong> process, these heterogeneous annotations are merged into stable and interpretable consensus anchors that connect subjective diversity with reproducible evaluation.
+            </p>
+            <p>
+              Building on this foundation, we design <strong>FIOVA-DQ</strong>, an event-weighted metric that integrates human attentional weighting to achieve cognitively faithful alignment between LVLM outputs and human consensus. Experiments on nine representative LVLMs reveal a consistent <em>complexity compression effect</em>: as semantic complexity increases, human descriptions become more diverse while model outputs converge toward uniform templates, indicating a structural gap between adaptive human cognition and regularized model reasoning.
+            </p>
+            <p>
+              <strong>FIOVA</strong> provides a reproducible and cognitively interpretable framework that unifies human diversity and consensus in evaluation, offering a principled basis for advancing LVLMs' cognitive alignment. 
             </p>
           </div>
         </div>
@@ -221,11 +221,11 @@
       </div>
       <div class="content has-text-justified">
         <br>
-        <p>(1) <b>Human-centric dataset with multi-annotator diversity:</b> We introduce FIOVA, a benchmark comprising 3,002 real-world videos (average 33.6 seconds) covering 38 themes with complex spatiotemporal dynamics. Each video is annotated by five independent annotators, capturing diverse perspectives and establishing a cognitively grounded baseline for human-level video description. This design enables modeling of semantic variability and inter-subjective agreement, offering an authentic testbed for evaluating long video comprehension.</p>
+        <p><b>(1) Paradigm and Benchmark:</b> We establish a <b>cognitively grounded group-consensus paradigm</b> that treats subjectivity as a structured, learnable distribution rather than random annotation noise. Under this paradigm, we construct <b>FIOVA</b>, a large-scale 5× multi-annotator benchmark of <b>3,002</b> videos (average duration <b>33.6s</b>), where a <b>Unified Consensus Groundtruth (UCG)</b> process captures both cognitive diversity and convergence. This paradigm bridges the cognitive gap between algorithmic objectivity and human subjectivity, transforming evaluation from textual alignment to cognitive alignment.</p>
 
-        <p>(2) <b>Comprehensive evaluation of nine representative LVLMs:</b> We evaluate nine leading LVLMs, including GPT-4o, InternVL-2.5, and Qwen2.5-VL, across both full and high-complexity (<b>FIOVA<sub>hard</sub></b>) subsets. Our tri-layer evaluation framework integrates traditional lexical metrics, event-level semantic alignment (AutoDQ), and cognitively weighted evaluation (FIOVA-DQ), revealing trade-offs between precision and recall as well as consistent model weaknesses under narrative ambiguity.</p>
+        <p><b>(2) Evaluation Framework:</b> We develop <b>FIOVA-DQ</b>, an event-weighted metric that introduces human-derived attentional weighting to evaluate fine-grained <em>cognitive alignment</em> between LVLM outputs and human consensus. We further design a <b>batch evaluation protocol</b> that integrates lexical, event-based, and cognitively weighted metrics for distribution-level assessment of model robustness and human–machine coherence. This framework establishes a closed-loop connection between human cognition modeling, LVLM response generation, and cognitively interpretable evaluation.</p>
         
-        <p>(3) <b>Complexity-aware human–machine comparison with cognitive alignment:</b> We propose a novel analysis framework based on inter-annotator variation (CV) to categorize videos by difficulty, enabling batch-level diagnosis of model robustness and behavior patterns. Our findings show that while humans increase descriptive diversity under complexity, LVLMs often converge to rigid, template-like outputs. FIOVA-DQ effectively captures this divergence by emphasizing event importance and aligning better with human judgment.</p>
+        <p><b>(3) Systematic Analysis:</b> Through extensive evaluation on nine representative LVLMs (VideoLLaMA2, Video-LLaVA, LLaVA-NEXT-Video, Tarsier, VideoChat2, ShareGPT4Video, InternVL-2.5, Qwen2.5-VL, and GPT-4o) across varying levels of semantic and narrative complexity, we reveal the <em>complexity compression effect</em>: as video complexity increases, human annotations diversify while model outputs converge toward template-like regularities. This phenomenon reflects a structural misalignment between adaptive human cognition and over-regularized model reasoning, highlighting cognitive alignment as a critical frontier for long-video evaluation.</p>
         
 
         <div style="text-align:center">
@@ -234,33 +234,38 @@
         <div class="content has-text-justified">
           <br>
           <p>
-            We introduce <b>FIOVA (Five-In-One Video Annotations)</b>, a benchmark specifically constructed to systematically evaluate the semantic and cognitive alignment of large vision-language models (LVLMs) in long-video comprehension tasks. The dataset comprises <b>3,002 real-world videos</b> (average duration: 33.6 seconds), covering <b>38 thematic categories</b>. Each video was <b>independently annotated by five human annotators</b> based solely on the visual content, excluding audio or subtitles. This multi-annotator design supports modeling of semantic diversity and inter-subjective agreement, providing a solid foundation for human-aligned evaluation.
+            <b>Operationalizing cognition.</b> FIOVA (<b>F</b>ive-<b>I</b>n-<b>O</b>ne <b>V</b>ideo <b>A</b>nnotations) is designed to capture the <em>subjectivity–consensus duality</em> of long-video understanding. We curate <b>3,002</b> medium-to-long videos spanning <b>38 themes</b>, and ask <b>five independent annotators</b> per video to describe the visual stream (audio is removed). This yields <b>15,010</b> human captions plus <b>3,002</b> consensus references, providing a dual-axis view of <b>subjective diversity</b> (individual captions) and <b>shared cognition</b> (consensus anchors).
           </p>
-        
+
           <div class="columns is-centered">
             <figure>
-              <img src="static/images/t1.png" alt="Table 1: Comparison of datasets">
+              <img src="static/images/f1.png" alt="Overview of the FIOVA construction pipeline">
             </figure>
           </div>
-        
+
           <p>
-            Compared to existing datasets, FIOVA offers substantial advantages in annotation richness and detail: each video is described using <b>paragraph-level captions averaging 63.3 words</b>, which is <b>4–15× longer</b> than captions in mainstream benchmarks (see <b>Table 1</b>). To construct a unified reference, we <b>fuse the five independent annotations</b> into a single <b>groundtruth caption</b> using a GPT-based synthesis process. This groundtruth preserves key events, contextual details, and temporal order, enabling robust model evaluation (see <b>Figure 4</b>).
+            <b>Pipeline from distribution to consensus.</b> The construction pipeline combines multi-human annotation, strict quality control, and <b>cognitive stratification</b> before synthesizing a <b>Unified Consensus Groundtruth (UCG)</b> for each video. An LLM-mediated procedure semantically fuses the five captions into a stable, neutral reference that preserves cross-annotator invariants while minimizing stylistic bias. Manual audits confirm that the UCG balances detail, temporal logic, and factual fidelity, making it a reliable cognitive anchor for evaluation (see the illustration below).
           </p>
-        
+
           <div class="columns is-centered">
             <figure>
-              <img src="static/images/f4.png" alt="Figure 4">
-              <!-- <figcaption style="text-align:center"><i>Figure 4. Example of multi-annotator captions, GPT-synthesized groundtruth, and FIOVA-DQ computation.</i></figcaption> -->
+              <img src="static/images/f6.png" alt="Illustration of consensus synthesis and event weighting">
             </figure>
           </div>
-        
+
           <p>
-            To assess annotation consistency, we score the five human captions for each video along five semantic dimensions: <b>consistency, context, correctness, detail orientation, and temporality</b>. We then compute the <b>coefficient of variation (CV)</b> across annotators for each video and use it to group the dataset into <b>eight complexity levels</b> (Groups A–H). Group A contains videos with the highest annotator agreement, while Group H includes highly ambiguous or subjective cases with substantial annotation disagreement.
+            <b>Quantifying cognitive variability.</b> To turn disagreement into a measurable signal, we score every human caption along five semantic dimensions—<b>consistency, context, correctness, detail orientation,</b> and <b>temporality</b>—and combine with caption length tocompute a composite <b>coefficient of variation (CV)</b>. The resulting distribution defines <b>eight cognitive strata (Groups A–H)</b> that range from high consensus to high divergence. We designate <b>FIOVA<sub>hard</sub></b> as Groups F–H, which exhibit frequent scene transitions, multi-perspective narratives, and low human agreement, providing stress tests for cognitively demanding scenarios.
           </p>
-        
+
           <p>
-            Based on this grouping, we define a challenge subset <b>FIOVA<sub>hard</sub></b>, which consists of Groups F–H. These videos are characterized by frequent scene transitions, multi-perspective narratives, and low human agreement, making them ideal for stress-testing LVLMs under cognitively demanding conditions.
+            <b>Statistics and coverage.</b> FIOVA’s paragraph-level captions average <b>63.3 words</b>—<b>4–15×</b> longer than existing benchmarks (Table&nbsp;1)—and exhibit rich correlations with video duration and event density. Word clouds contrasting individual annotators with the UCG reveal how consensus emphasizes core events while retaining stylistic dispersion. Together, these statistics show how FIOVA covers both the breadth of human perception and the depth of shared understanding, laying the foundation for cognitively grounded evaluation in next section.
           </p>
+
+          <div class="columns is-centered">
+            <figure>
+              <img src="static/images/t1.png" alt="Comparison of video captioning datasets and annotation statistics">
+            </figure>
+          </div>
         </div>
         
 
@@ -270,36 +275,36 @@
         <div class="content has-text-justified">
           <br>
           <p>
-            To construct the FIOVA benchmark, we collected video captions generated by six state-of-the-art large vision-language models (LVLMs): <b>VideoLLaMA2</b>, <b>LLaVA-NEXT-Video</b>, <b>Video-LLaVA</b>, <b>VideoChat2</b>, <b>Tarsier</b>, and <b>ShareGPT4Video</b>. Each model was prompted with the same task: generate a detailed caption describing the visual content of <b>3,002 videos</b> from the FIOVA dataset.
+            Building on the human consensus references from Step&nbsp;1, we collect LVLM-generated captions under harmonized conditions. We evaluate nine representative models that span prevailing design families: six open-source systems—<b>VideoLLaMA2</b>, <b>Video-LLaVA</b>, <b>LLaVA-NEXT-Video</b>, <b>Tarsier</b>, <b>VideoChat2</b>, and <b>ShareGPT4Video</b>—plus three proprietary or frontier models—<b>InternVL-2.5</b>, <b>Qwen2.5-VL</b>, and <b>GPT-4o</b> (the latter restricted to <b>FIOVA<sub>hard</sub></b>). All models follow a unified prompt template and are supplied with identical 8-frame clips, ensuring fair comparison across architectures.
           </p>
           <p>
-            For consistency and fairness, we applied unified prompting strategies and carefully tuned generation parameters for each model, including <i>temperature</i>, <i>max token length</i>, and <i>sampling method</i>. All models were run on 8-frame video inputs. In total, <b>18,012 model responses</b> were collected, forming a large-scale corpus of video-description-response triplets. This collection enables structured evaluation of video understanding capabilities and direct comparison with human-annotated groundtruths.
+            Inference settings are harmonized whenever interfaces permit: a maximum output length of 1,024 tokens, model-specific decoding parameters (for example, temperature 0.2 for VideoLLaMA2, 1.0/0.9 top-p for VideoChat2 and ShareGPT4Video, 0.1 for Video-LLaVA, and deterministic decoding for Tarsier and LLaVA-NEXT-Video) and fixed random seeds. This protocol yields <b>18,012</b> video–caption pairs that align human references with machine summaries, capturing heterogeneous verbosity and reasoning styles that serve as inputs for cognitively aligned evaluation.
           </p>
           <p>
-            To complement our main evaluation, we further perform stress testing on <b>FIOVA<sub>hard</sub></b>—a subset comprising the most semantically complex videos with low annotator agreement (Groups F–H). Beyond the six baseline models, we additionally include three frontier LVLMs—<b>InternVL-2.5</b>, <b>Qwen2.5-VL</b>, and <b>GPT-4o</b>—exclusively on this subset. This extended setting enables a focused assessment of model robustness and alignment under cognitively challenging conditions.
+            To probe robustness under high cognitive divergence, we additionally evaluate the frontier models on <b>FIOVA<sub>hard</sub></b> (Groups F–H), which comprise videos with multi-perspective narratives, rapid transitions, and low human agreement. This stress-test subset, together with the full corpus, enables nuanced analysis of model behaviour across semantic complexity levels.
           </p>          
           <p>
-            Combined with our cognitively weighted event-level evaluation framework FIOVA-DQ (see <b>Figure 4</b>), this comprehensive model response collection provides a foundation for in-depth analysis of model behaviors, failure modes, and human alignment across both typical and challenging video scenarios.
+            The resulting response collection underpins the cognitively aligned evaluation framework detailed below, allowing us to study human–model alignment across linguistic, structural, and cognitive dimensions.
           </p>
         </div>
         
         
         <div style="text-align:center">
-          <h2 class="title is-3">Overall Evaluation for LVLMs</h2>
+          <h2 class="title is-3">Cognitively Aligned Evaluation Framework</h2>
         </div>
         <div class="content has-text-justified">
           <br>
           <p>
-            We evaluate the six baseline LVLMs using three complementary families of metrics: <b>traditional lexical metrics</b> (BLEU, METEOR, GLEU), the <b>event-based AutoDQ</b> framework, and our proposed <b>cognitively weighted FIOVA-DQ</b>. Each metric captures different aspects of model output quality—surface fluency, structural completeness, and human-aligned semantic relevance, respectively.
+            We link human consensus cognition to LVLM behaviour through a three-layer evaluation stack. At the <b>linguistic layer</b>, conventional metrics such as BLEU, METEOR, and GLEU offer reproducible surface-level comparison between model outputs and human references. The <b>structural layer</b> adopts event-based AutoDQ to decompose captions into aligned event units, enabling explicit reasoning about semantic coverage and narrative ordering. Building upon this representation, the <b>cognitive layer</b> introduces <b>FIOVA-DQ</b>, which weights events by human attentional agreement so that cognitively central information contributes more strongly to precision, recall, and F1.
           </p>
           <p>
-            As shown in <b>Table 3</b>, <b>Tarsier</b> achieves the highest F1 and recall under both AutoDQ and FIOVA-DQ, indicating strong event coverage. However, this comes at the cost of lower precision due to frequent overgeneration. In contrast, <b>ShareGPT4Video</b> attains the highest precision across both metrics but suffers from the lowest recall, revealing a conservative captioning strategy that often omits important content.
+            <b>Table&nbsp;3</b> summarises the tri-layer results. Models such as <b>Tarsier</b> excel in recall-oriented behaviour under AutoDQ and FIOVA-DQ, demonstrating strong event coverage but lower precision due to over-generation. <b>ShareGPT4Video</b> shows the opposite tendency, producing concise descriptions with high precision yet sacrificing recall. <b>VideoLLaMA2</b> and <b>LLaVA-NEXT-Video</b> fall between these extremes, highlighting trade-offs that become visible only when lexical, structural, and cognitive views are analysed together.
           </p>
           <p>
-            Models such as <b>VideoLLaMA2</b> and <b>LLaVA-NEXT-Video</b> fall between these two extremes, exhibiting moderate trade-offs. Importantly, our evaluation confirms that <b>FIOVA-DQ achieves the strongest correlation with human preference</b> (Spearman ρ = 0.579), validating its effectiveness as a cognitively grounded metric.
+            Importantly, <b>FIOVA-DQ</b> achieves the strongest correlation with human preference (Spearman ρ&nbsp;=&nbsp;0.579), validating the role of cognitive weighting in capturing human judgments. This layered framework therefore provides both fine-grained diagnostic information and an aggregated view of human–model alignment.
           </p>
           <p>
-            These results highlight the limitations of relying solely on traditional lexical overlap and emphasize the value of semantically and cognitively informed evaluation frameworks for diagnosing model behaviors in complex video captioning tasks.
+            By fusing lexical overlap, event-structured analysis, and human-attention weighting, the framework extends beyond traditional metrics and lays the groundwork for distribution-level diagnostics introduced next.
           </p>
         </div>
         <div class="columns is-centered">
@@ -316,31 +321,39 @@
         <div class="content has-text-justified">
           <br>
           <p>
-            To examine model robustness under different levels of semantic complexity, we divide the FIOVA dataset into <b>eight sub-groups (Groups A–H)</b> based on the coefficient of variation (CV) across six annotation dimensions. These groups reflect varying degrees of annotator agreement and thus serve as a proxy for input ambiguity and difficulty.
+            To complement per-caption metrics, we analyse stability at the batch level using the coefficient of variation (CV). Human annotations are first evaluated across six cognitive dimensions (Consistency, Context, Correctness, Detail Orientation, Temporality, and Length) to obtain per-video CVs. These values define <b>eight cognitive strata (Groups A–H)</b>, ranging from high consensus to high divergence, which act as a graded measure of semantic complexity.
           </p>
-          <p>
-            We evaluate each LVLM’s performance within these groups using both <b>AutoDQ</b> and <b>FIOVA-DQ</b> metrics. As shown in <b>Figure 7</b>, <b>Tarsier</b> achieves the highest recall and F1 scores across most groups, demonstrating strong temporal modeling. In contrast, <b>ShareGPT4Video</b> consistently yields the highest precision but at the cost of lower recall, reflecting a conservative captioning strategy. All models exhibit clear performance drops in <b>Group H</b>—which contains the most cognitively complex videos—revealing that current LVLMs still struggle with multi-event, ambiguous scenarios.
-          </p>
-          <p>
-            These results reveal distinct behavioral strategies: models like Tarsier tend to prioritize recall and semantic coverage, while others like ShareGPT4Video favor precision and stylistic consistency. This trade-off highlights the importance of building <b>balanced LVLMs</b> that can adapt to both simple and complex video inputs.
-          </p>
-          
-        
-        <div class="columns is-centered">
-          <figure>
-            <img src="static/images/f7.png" alt="Figure 7">
-            <!-- <figcaption style="text-align:center"><i>Figure 7. Radar plots of LVLM performance across CV-based sub-groups under BLEU, AutoDQ, and FIOVA-DQ metrics.</i></figcaption> -->
-          </figure>
-        </div>
 
-        <p>
-          In <b>Figure 8</b>, we further analyze consistency trends by comparing CV rankings between humans and models. Interestingly, models show higher variability in simple videos (Groups A–B), whereas human annotations become more diverse in complex videos (Groups F–H). This inverse trend suggests that LVLMs resort to safer, template-like generations under uncertainty, while humans diversify their interpretations—underscoring the need for cognitively aligned evaluation frameworks.
+          <div class="columns is-centered">
+            <figure>
+              <img src="static/images/f8.png" alt="Figure 8">
+              <!-- <figcaption style="text-align:center"><i>Figure 8. Comparison of CV rankings between humans and LVLMs across groups (a) and ranking differences (b).</i></figcaption> -->
+            </figure>
+          </div>
+          <br>
+
+          <p>
+            Applying the same CV analysis to LVLM outputs across the linguistic, structural, and cognitive metric families yields model-side stability scores. <b>Figure&nbsp;11</b> reports these results, revealing distinct behavioural strategies: <b>Tarsier</b> prioritises recall and achieves high weighted F1 across most strata, whereas <b>ShareGPT4Video</b> favours precision at the cost of coverage. All models experience pronounced drops in <b>Group&nbsp;H</b>, confirming the difficulty of cognitively complex, low-agreement videos.
+          </p>
+          <p>
+            <b>Figure&nbsp;12</b> further compares the human and model rankings induced by these CV scores. The observed <em>ranking gaps</em> quantify how far model stability patterns drift from human regularities: LVLMs display higher variability on simple videos (Groups A–B), whereas humans diverge more in complex scenarios (Groups F–H). This batch-ranking perspective pinpoints where models revert to template-like summaries instead of mirroring the adaptive diversity of human cognition.
+          </p>
+         
+         <div class="columns is-centered">
+           <figure>
+             <img src="static/images/f11.png" alt="Figure 11">
+             <!-- <figcaption style="text-align:center"><i>Figure 11. Radar plots of LVLM performance across CV-based sub-groups under BLEU, AutoDQ, and FIOVA-DQ metrics.</i></figcaption> -->
+           </figure>
+         </div>
+ 
+         <p>
+          Taken together, the CV-based diagnostics highlight the need for cognitively aligned evaluation: even when average scores appear comparable, human–machine stability differences persist across complexity levels, motivating further analysis in the following sections.
         </p>
       </div>
       
         <div class="columns is-centered">
           <figure>
-            <img src="static/images/f8.png" alt="Figure 8">
+            <img src="static/images/f12.png" alt="Figure 12">
             <!-- <figcaption style="text-align:center"><i>Figure 8. Comparison of CV rankings between humans and LVLMs across groups (a) and ranking differences (b).</i></figcaption> -->
           </figure>
         </div>
@@ -352,11 +365,11 @@
         <div class="content has-text-justified">
           <br>
           <p>
-            We evaluate nine representative LVLMs on <b>FIOVA<sub>hard</sub></b>—a high-complexity subset including Groups F–H—to diagnose model performance under cognitively demanding conditions. As shown in <b>Table 5</b>, <b>Tarsier</b> achieves the highest recall (0.636) in FIOVA-DQ, reflecting strong event coverage. However, its lower precision leads to a reduced F1 score (0.262). In contrast, <b>GPT-4o</b> attains the best overall F1 score (0.367), balancing recall and precision, while <b>InternVL-2.5</b> and <b>Qwen2.5-VL</b> achieve the highest precision (0.740 and 0.724 respectively), indicating conservative but accurate captioning.
-          </p>
-          <p>
-            These results show that while some models excel at identifying more events (high recall), others favor accuracy (high precision). FIOVA-DQ highlights this trade-off and better reflects human alignment than lexical metrics.
-          </p>
+            We evaluate nine LVLMs on <b>FIOVA<sub>hard</sub></b>—Groups F–H with high inter-annotator divergence—to stress-test cognitive robustness. <b>Table&nbsp;5</b> shows that baseline models drop substantially when subjectivity rises: for instance, VideoChat2’s FIOVA-DQ F1 decreases from 0.287 (full set) to 0.234, with Recall falling from 0.243 to 0.180. Video-LLaVA exhibits a similar degradation, revealing difficulty in maintaining narrative continuity across long, ambiguous sequences. In contrast, <b>Tarsier</b> retains recall-oriented resilience (Recall = 0.636) but its Precision (0.152) depresses the overall F1 to 0.262, indicating coverage without filtering cognitively salient content. <b>ShareGPT4Video</b> behaves oppositely—Precision 0.756 but Recall 0.150—reflecting an overly cautious decoding strategy that omits contextual information. These patterns expose the lack of a balancing mechanism between completeness and selectivity under uncertainty.
+         </p>
+         <p>
+            Among large-scale systems, <b>GPT-4o</b> delivers the best cognitive–linguistic balance (FIOVA-DQ F1 = 0.367), sustaining interpretive breadth while preserving precision. <b>InternVL-2.5</b> and <b>Qwen2.5-VL</b> achieve higher precision (0.740 and 0.724) yet lower recall, revealing fact-centric strategies that sacrifice narrative coherence. The comparison underscores that scaling alone does not guarantee adaptability; temporal grounding and reasoning design remain decisive for coping with ambiguous scenes.
+         </p>
         </div>
         
         <div class="columns is-centered">
@@ -368,7 +381,7 @@
         
         <div class="content has-text-justified">
           <p>
-            To explore temporal sensitivity, we further conduct frame-length ablation on selected models (Table 6). <b>GPT-4o</b> shows significant gains in both F1 (↑ from 0.367 to 0.418) and recall (↑ from 0.251 to 0.264) when increasing input length from 8 to 32 frames, confirming its ability to leverage temporal context. <b>InternVL-2.5</b> maintains high precision (↑ to 0.743), while <b>Tarsier</b> remains recall-oriented but plateaus in F1. These results indicate that longer temporal context can enhance performance for advanced models, while others may saturate.
+            We also vary input length on representative models (Table&nbsp;6). <b>GPT-4o</b> benefits most from temporal expansion: its FIOVA-DQ F1 improves from 0.367 (8 frames) to 0.418 (32 frames), with Recall rising from 0.251 to 0.264. <b>Qwen2.5-VL</b> exhibits a similar upward trend, whereas <b>InternVL-2.5</b> peaks in Precision (0.743) at 32 frames and <b>Tarsier</b> maintains stable Recall (~0.64) across lengths. Longer contexts thus enhance robustness but intensify the Precision–Recall trade-off, revealing each model’s effective cognitive bandwidth.
           </p>
         </div>
         
@@ -379,7 +392,29 @@
           </figure>
         </div>
         <br>
-        
+ 
+        <div style="text-align:center">
+          <h2 class="title is-3">Discussion</h2>
+        </div>
+        <div class="content has-text-justified">
+          <br>
+          <p>
+            The multi-layer evaluation reveals a structured performance landscape: LVLMs align along a precision–recall continuum that reflects distinct reasoning preferences. <b>Tarsier</b> pursues recall-oriented coverage (Recall 0.636 on <b>FIOVA<sub>hard</sub></b>) at the expense of cognitive precision, whereas <b>InternVL-2.5</b> and <b>Qwen2.5-VL</b> emphasise factual accuracy (Precision 0.740/0.724) but lose narrative breadth. <b>GPT-4o</b> attains the most balanced F1 (0.367), indicating emergent self-calibration between detail and coherence, yet still falls short of human adaptability.
+          </p>
+          <p>
+            Human preference studies corroborate this picture: FIOVA-DQ (Spearman F1 = 0.579) approximates human rankings far better than AutoDQ (0.125), demonstrating that cognitively weighted scoring captures salience, causality, and contextual relevance—the dimensions humans prioritise when describing long videos.
+          </p>
+          <p>
+            CV-based analyses expose a <em>cognitive compression effect</em>. As ambiguity increases, human annotators diversify their descriptions, whereas LVLMs converge on deterministic, template-like outputs. Caption-length correlation studies (see Appendix) and the ranking gaps in Fig.&nbsp;8 show that models stabilise surface form instead of expanding reasoning pathways, revealing limited meta-cognitive adaptability under uncertainty.
+          </p>
+          <p>
+            Error inspections reinforce this interpretation: ShareGPT4Video hallucinated redundant details, while Tarsier omitted pivotal events, indicating brittle causal abstraction. Models handle low-entropy scenes reliably but collapse in multi-perspective narratives, suggesting reliance on pattern continuity rather than situational inference.
+          </p>
+          <p>
+            Finally, the integrated methodology—traditional metrics, AutoDQ, FIOVA-DQ, and batch-ranking—links measurement with mechanism. It transitions evaluation from aggregate scores to behavioural diagnosis, pinpointing where LVLM stability diverges from human interpretive flexibility and guiding future model design toward cognitively coherent reasoning.
+          </p>
+        </div>
+
         <br />
       <div class="columns is-centered">
         <div class="column is-full-width">
@@ -445,7 +480,7 @@
             <div class="content has-text-justified">
               <div class="columns is-centered">
                 <figure>
-                  <img src="static/images/A19.png" alt="Figure A19">
+                  <img src="static/images/A13.png" alt="Figure A13">
                 </figure>
             </div>
               <p>
@@ -460,7 +495,7 @@
             <div class="content has-text-justified">
               <div class="columns is-centered">
                 <figure>
-                  <img src="static/images/A20.png" alt="Figure A20">
+                  <img src="static/images/A14.png" alt="Figure A14">
                 </figure>
             </div>
               <p>
@@ -475,7 +510,7 @@
             <div class="content has-text-justified">
               <div class="columns is-centered">
                 <figure>
-                  <img src="static/images/A21.png" alt="Figure A21">
+                  <img src="static/images/A15.png" alt="Figure A15">
                 </figure>
             </div>
               <p>
@@ -490,7 +525,7 @@
             <div class="content has-text-justified">
               <div class="columns is-centered">
                 <figure>
-                  <img src="static/images/A22.png" alt="Figure A22">
+                  <img src="static/images/A16.png" alt="Figure A16">
                 </figure>
             </div>
               <p>
@@ -506,12 +541,12 @@
             <div class="content has-text-justified">
               <div class="columns is-centered">
                 <figure>
-                  <img src="static/images/A23.png" alt="Figure A23">
+                  <img src="static/images/A17.png" alt="Figure A17">
                 </figure>
             </div>
               <p>
                 <b>Analysis:</b><br>
-                <pre style="white-space: pre-wrap; word-break: keep-all;">The models demonstrated strong descriptive abilities for a video depicting Brazilian Jiu-Jitsu practice. The stable camera work and clear temporal relationships enabled accurate recognition and detailed description of activities and actions. LVLMs typically perform well on videos with simple, well-structured content, as such videos reduce interpretative ambiguity and allow the models to focus on key visual elements, showcasing their strengths in straightforward scenarios with minimal complexity. Despite the overall strong performance, some issues remain. Repetitive descriptions and redundancy were observed across the models, though hallucinations were relatively rare. Interestingly, while most LVLMs successfully identified the martial arts clothing worn by the characters, Video-LLaVA recognized only the color of the clothing without distinguishing its category. These results highlight the strengths and limitations of current LVLMs in processing videos with limited complexity.</pre>
+                <pre style="white-space: pre-wrap; word-break: keep-all;">The models demonstrated strong descriptive abilities for a video depicting Brazilian Jiu-Jitsu practice. The stable camera work and clear temporal relationships enabled accurate recognition and detailed description of activities and actions. LVLMs typically perform well on videos with simple, well-structured content, as such videos reduce interpretative ambiguity and allow the models to focus on key visual elements, showcasing their strengths in straightforward scenarios with minimal complexity. Despite the overall strong performance, some issues remain. Repetitive descriptions and redundancy were observed across the models, though hallucinations were relatively rare. Interestingly, while most LVLMs successfully identified the martial arts clothing worn by the characters, Video-LLaVA recognized only the color of the clothing without distinguishing its category. These results highlight the strengths and limitations of current LVLMs in processing videos with limited complexity..</pre>
               </p>
             </div>
           </div>
@@ -521,7 +556,7 @@
             <div class="content has-text-justified">
               <div class="columns is-centered">
                 <figure>
-                  <img src="static/images/A24.png" alt="Figure A24">
+                  <img src="static/images/A18.png" alt="Figure A18">
                 </figure>
             </div>
               <p>
