@@ -1,99 +1,13 @@
-
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="FIOVA (Five-in-One Video Annotations) Benchmark">
-  <meta name="keywords" content="Video Caption, Video Understanding, LVLM Evaluation, Human-machine Comparison">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FIOVA (Five-in-One Video Annotations) Benchmark</title>
-
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<!-- <meta name="generator" content="Jekyll v3.9.3" /> -->
-<meta property="og:title" content="FIOVA (Five-in-One Video Annotations) Benchmark" />
-<meta property="og:locale" content="en_US" />
-<link rel="canonical" href="https://huuuuusy.github.io/fiova/" />
-<meta property="og:url" content="https://huuuuusy.github.io/fiova/" />
-<meta property="og:site_name" content="FIOVA (Five-in-One Video Annotations) Benchmark" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://huuuuusy.github.io/fiova/static/images/logo.png" />
-<!-- <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="FIOVA (Five-in-One Video Annotations) Benchmark" />
-<meta name="twitter:description" content="FIOVA (Five-in-One Video Annotations) Benchmark." />
-<meta name="twitter:site" content="@CanyuChen3" />
-<meta name="twitter:image" content="https://huuuuusy.github.io/fiova/static/images/logo.png" /> -->
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"FIOVA (Five-in-One Video Annotations) Benchmark","name":"FIOVA (Five-in-One Video Annotations) Benchmark","url":"https://huuuuusy.github.io/fiova/"}</script>
-<!-- End Jekyll SEO tag -->
-
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/icon.svg">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-
-  <style>
-    .grey-box {
-        background-color: #c0c0c0; /* Grey color */
-        color: rgb(70, 70, 70); /* White text color */
-        padding: 20px; /* Padding inside the box */
-        margin: 20px; /* Margin outside the box */
-        text-align: center; /* Center the text */
-    }
-    .publication-title {
-        word-break: normal !important;
-        writing-mode: horizontal-tb !important;
-        text-orientation: mixed !important;
-        white-space: normal !important;
-        display: block !important;
-    }
-    h1.publication-title {
-        line-height: 1.2 !important;
-        margin-bottom: 1rem !important;
-    }
-  </style>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
-</head>
-
-<body>
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-  
-            <!-- Logo -->
-            <img src="static/images/logo_1.png"
-                 alt="FIOVA: Cognitively Grounded Group-Consensus Benchmark"
-                 width="900"/>
-  
-            <!-- Main Title -->
-            <h1 class="title is-2 publication-title">
-              Beyond Single-Reference: Toward Cognitively Grounded Group-Consensus Evaluation of LVLMs in Video Understanding
-            </h1>
-  
-            <!-- Authors -->
-            <div class="is-size-5 publication-authors">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FIOVA — Five-in-One Video Annotations</title><meta name="description" content="FIOVA evaluates video captions using five independent human descriptions, a shared consensus reference, and event-importance weighting. Explore the dataset, methods, and results for twelve LVLMs."><link rel="canonical" href="https://huuuuusy.github.io/fiova/"><meta property="og:title" content="FIOVA — Five-in-One Video Annotations"><meta property="og:description" content="Human diversity and shared consensus for evaluating video captions."><meta property="og:type" content="website"><meta property="og:url" content="https://huuuuusy.github.io/fiova/"><meta property="og:image" content="https://huuuuusy.github.io/fiova/static/images/logo.png"><link rel="icon" href="static/images/logo.png"><link rel="stylesheet" href="static/css/index.css"><script defer src="static/js/index.js"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main navigation"><a class="wordmark" href="#top">FIOVA</a>
+<div class="nav-links"><a href="#dataset">Dataset</a><a href="#method">Method</a><a href="#results">Results</a><a href="#hard">FIOVA<sub>hard</sub></a><a href="#examples">Demo</a><a href="#resources">Resources</a>
+</div>
+</nav>
+<main id="main">
+<header id="top" class="hero"><img class="logo" src="static/images/logo_1.png" alt="FIOVA: Five-in-One Video Annotations" width="10409" height="715">
+<h1>Beyond Single-Reference: Toward Cognitively Grounded Group-Consensus Evaluation of LVLMs in Video Captioning
+</h1>
+<div class="authors">
               <span class="author-block">
                 <a href="https://huuuuusy.github.io/">Shiyu Hu*</a><sup>1</sup>,
               </span>
@@ -121,9 +35,9 @@
               <span class="author-block">
                 <a href="https://dr.ntu.edu.sg/cris/rp/rp02319">Kang Hao Cheong</a><sup>1,8</sup>
               </span>
-            </div>
+</div>
             
-            <div class="is-size-6 publication-authors">
+<div class="affiliations">
               <sup>1</sup>School of Physical and Mathematical Sciences, Nanyang Technological University, Singapore<br/>
               <sup>2</sup>Institute of Automation, Chinese Academy of Sciences, Beijing, China<br/>
               <sup>3</sup>University of Chinese Academy of Sciences, Beijing, China<br/>
@@ -132,518 +46,507 @@
               <sup>6</sup>Department of Artificial Intelligence, Westlake University, Zhejiang, China<br/>
               <sup>7</sup>School of Computer and Communication Engineering, University of Science and Technology Beijing, China<br/>
               <sup>8</sup>College of Computing and Data Science, Nanyang Technological University, Singapore
-            </div>
+</div>
             
-            <!-- Publication Links -->
-            <!-- Links are commented out for now -->
+<p class="author-note">* Shiyu Hu and Xuchen Li contributed equally to this work.
+</p>
+<p class="hero-summary">Five independent descriptions capture what people notice differently. One consensus reference captures what they share. FIOVA uses both to evaluate video captions.
+</p>
+<div class="actions"><a class="button primary" href="https://huggingface.co/datasets/huuuuusy/FIOVA">Explore the dataset</a><a class="button" href="#results">View benchmark results</a>
+</div>
+<dl class="stats">
+<div><dt>3,002</dt><dd>videos</dd>
+</div>
+<div><dt>5</dt><dd>human captions per video</dd>
+</div>
+<div><dt>38</dt><dd>thematic domains</dd>
+</div>
+<div><dt>12</dt><dd>evaluated LVLMs</dd>
+</div>
+</dl>
+<p class="version">Results and descriptions aligned with the September 2026 manuscript.
+</p>
+</header>
+<section id="overview" class="section">
+<div class="section-head"><span class="eyebrow">Overview</span>
+<h2>Human diversity and shared consensus
+</h2>
+</div>
+<div class="prose">
+<p>Evaluating open-ended captions for medium- to long-duration videos is difficult because people differ in what they attend to, how they segment events, and how they describe them. Existing benchmarks often provide multiple references, but variation and shared content are rarely modeled as distinct evaluation objects.
+</p>
+<p><strong>FIOVA</strong> retains five independent human captions for every video. A <strong>Unified Consensus Groundtruth (UCG)</strong> organizes their shared content into a fixed reference. <strong>FIOVA-DQ</strong> then measures event support and coverage with importance weights guided by the five human descriptions. <strong>Batch-Ranking</strong> compares model behavior across levels of human disagreement.
+</p>
+</div>
+<figure><a class="figure-link" href="static/images/current/overview.png" aria-label="Enlarge: FIOVA benchmark and evaluation workflow"><img src="static/images/current/overview.png" alt="FIOVA benchmark and evaluation workflow" loading="eager" decoding="async" width="2000" height="1062"></a>
+<figcaption>The FIOVA workflow: dataset construction, LVLM response collection, and evaluation. <span class="zoom-hint">Select image to enlarge.</span>
+</figcaption>
+</figure>
+<div class="contributions">
+<div>
+<h3>Retain variation
+</h3>
+<p>Use the original descriptions to characterize human disagreement and form evaluation strata.
+</p>
+</div>
+<div>
+<h3>Evaluate shared content
+</h3>
+<p>Use UCG as the common reference, with human-guided importance weights for individual events.
+</p>
+</div>
+<div>
+<h3>Compare model behavior
+</h3>
+<p>Evaluate six baselines across the full benchmark and twelve models on its high-disagreement subset.
+</p>
+</div>
+</div>
+</section>
+<section id="dataset" class="section">
+<div class="section-head"><span class="eyebrow">Data and annotation</span>
+<h2>The FIOVA dataset
+</h2>
+</div>
+<div class="prose">
+<p>The dataset contains <strong>3,002 videos across 38 themes</strong>, with an average duration of <strong>33.6 seconds</strong>. Five dynamically assigned annotators independently describe each video using visual information: audio is removed and on-screen text is retained. Human1–Human5 denote caption slots, not five fixed annotators across the dataset.
+</p>
+<p>The collection contains <strong>15,010 human captions and 3,002 UCG references</strong>. Captions pass annotator self-check, third-party verification, and author-team acceptance before entering UCG construction and disagreement analysis. The original captions remain available alongside the consensus reference.
+</p>
+</div>
+<figure id="dataset-examples"><a class="figure-link" href="static/images/current/dataset-examples.png" aria-label="Enlarge: Representative FIOVA video scenes"><img src="static/images/current/dataset-examples.png" alt="Representative video scenes from FIOVA, including daily life, sports, nature, animals, and social activities" width="2400" height="919" loading="lazy" decoding="async"></a><figcaption>Representative examples from FIOVA (main-paper Fig. 2), illustrating its thematic and visual diversity. <span class="zoom-hint">Select image to enlarge.</span></figcaption></figure>
+<div class="prose">
+<h3>Eight fixed disagreement strata
+</h3>
+<p>Each human caption is rated for consistency, context, correctness, detail orientation, and temporality; word count supplies the sixth component. For each video, we compute the coefficient of variation across its five captions for each component and average the six CVs equally. Fixed-width intervals define Groups A–H; these are not equal-sized percentile bins.
+</p>
+<p>Group sizes from A to H are <strong>64, 964, 786, 626, 393, 130, 30, and 9</strong>. <strong>FIOVA<sub>hard</sub></strong> contains Groups F–H: <strong>169 videos</strong> with the highest measured disagreement.
+</p>
+</div>
+<figure><a class="figure-link" href="static/images/current/annotation-groups.png" aria-label="Enlarge: Six annotation components across Groups A–H"><img src="static/images/current/annotation-groups.png" alt="Six annotation components across Groups A–H" loading="lazy" decoding="async" width="1800" height="333"></a>
+<figcaption>Human annotation variability across the eight disagreement strata. <span class="zoom-hint">Select image to enlarge.</span>
+</figcaption>
+</figure>
+<div class="table-heading">
+<h3>Reference structures across datasets
+</h3>
+</div>
+<p class="scroll-hint">Swipe or scroll horizontally to view all columns.
+</p>
+<div class="table-scroll" role="region" aria-label="Reference structures across datasets" tabindex="0">
+<table id="table-datasets">
+<caption>Adapted from manuscript Table I. Scale units and caption-aligned lengths follow the original sources.
+</caption>
+<thead>
+<tr><th scope="col">Dataset</th><th scope="col">Reference structure</th><th scope="col">Scale</th><th scope="col">Average aligned length</th><th scope="col">Average text length</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">HowTo100M</th><td>ASR-generated</td><td>136M clips</td><td>≈4s</td><td>4.0 w</td>
+</tr>
+<tr><th scope="row">ACAV</th><td>A/V only</td><td>100M clips</td><td>10.0s</td><td>--</td>
+</tr>
+<tr><th scope="row">YT-Temporal-180M</th><td>ASR-generated</td><td>180M frames</td><td>--</td><td>--</td>
+</tr>
+<tr><th scope="row">HD-VILA-100M</th><td>ASR-generated</td><td>103M clips</td><td>13.4s</td><td>32.5 w</td>
+</tr>
+<tr><th scope="row">Panda-70M</th><td>LVLM-generated</td><td>70.8M clips</td><td>8.5s</td><td>13.2 w</td>
+</tr>
+<tr><th scope="row">MSVD</th><td>Multiple human refs.</td><td>1.97K clips</td><td>9.7s</td><td>8.7 w</td>
+</tr>
+<tr><th scope="row">LSMDC 2015</th><td>1 aligned ref.</td><td>118K clips</td><td>4.8s</td><td>9.7† w</td>
+</tr>
+<tr><th scope="row">MSR-VTT</th><td>≈20 human refs.</td><td>10K clips</td><td>≈15s</td><td>9.3† w</td>
+</tr>
+<tr><th scope="row">DiDeMo</th><td>Moment-level refs.</td><td>10.5K videos</td><td>6.9s</td><td>8.0 w</td>
+</tr>
+<tr><th scope="row">ActivityNet Captions</th><td>Event-level refs.</td><td>20K videos</td><td>36.0s</td><td>13.5 w</td>
+</tr>
+<tr><th scope="row">YouCook2</th><td>Step-level refs.</td><td>2K videos</td><td>19.6s</td><td>8.8 w</td>
+</tr>
+<tr><th scope="row">VATEX</th><td>10 EN + 10 ZH refs.</td><td>41.3K videos</td><td>≈10s</td><td>15.2 w</td>
+</tr>
+<tr><th scope="row">DREAM-1K</th><td>1 detailed ref.</td><td>1K clips</td><td>8.9s</td><td>59.3 w</td>
+</tr>
+<tr><th scope="row">AuroraCap (VDC)</th><td>1 reviewed ref.</td><td>1,027 videos</td><td>28.2s</td><td>500.9 w</td>
+</tr>
+<tr><th scope="row">FIOVA (Ours)</th><td>5 independent + UCG</td><td>3,002 videos</td><td>33.6s</td><td>61.4 w</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">Reference counts describe captions, not distinct annotator identities. FIOVA combines five independently collected descriptions with UCG. ASR: automatic speech recognition; A/V: audio–visual; w: words. Aligned length follows the captioned moment, event, or step where applicable. VATEX text length refers to English captions; HowTo100M excludes stop words. MSVD statistics and DiDeMo mean lengths follow Panda-70M. † Calculated from aggregate statistics in the original papers. Full source references are listed in manuscript Table I.
+</p>
+<h3>Video, caption, and vocabulary distributions</h3><figure><a class="figure-link" href="static/images/current/dataset-distribution.png" aria-label="Enlarge: Video, caption, and vocabulary distributions"><img src="static/images/current/dataset-distribution.png" alt="Video, caption, and vocabulary distributions" width="2200" height="1342" loading="lazy" decoding="async"></a><figcaption>Dataset and response statistics: video length, human-caption granularity, caption length versus duration, baseline response lengths, and vocabulary across human captions and UCG. <span class="zoom-hint">Select image to enlarge.</span></figcaption></figure><h3>Human annotation reliability and disagreement strata</h3><figure><a class="figure-link" href="static/images/current/annotation-variability.png" aria-label="Enlarge: Human annotation reliability and disagreement strata"><img src="static/images/current/annotation-variability.png" alt="Human annotation reliability and disagreement strata" width="2200" height="395" loading="lazy" decoding="async"></a><figcaption>Score distributions across the five semantic dimensions and video counts across the eight fixed-width disagreement strata. <span class="zoom-hint">Select image to enlarge.</span></figcaption></figure>
+</section>
+<section id="method" class="section">
+<div class="section-head"><span class="eyebrow">Evaluation</span>
+<h2>From captions to event scores
+</h2>
+</div>
+<div class="prose">
+<h3>A common captioning task
+</h3>
+<p>Six baseline LVLMs are evaluated on the full benchmark: Tarsier, VideoLLaMA2, LLaVA-NeXT-Video, Video-LLaVA, ShareGPT4Video, and VideoChat2. These produce <strong>18,012 video–caption pairs</strong>. All twelve models are evaluated on FIOVA<sub>hard</sub>, adding Tarsier2, InternVL-2.5, InternVL-3, Qwen2.5-VL, GPT-4o, and Gemini-2.5-Flash.
+</p>
+<p>The main comparison uses eight input frames. All models perform the same detailed-captioning task, using the default instruction except for the documented official LLaVA-NeXT-Video prompt. Model-specific input and decoding settings are retained; the maximum output length is 1,024 tokens where interfaces permit. Appendix D-B documents the protocol.
+</p>
+<h3>Three complementary metric families
+</h3>
+<ul class="method-list">
+<li><strong>Lexical metrics:</strong> BLEU, METEOR, and GLEU compare wording with UCG.
+</li>
+<li><strong>AutoDQ:</strong> extracted events are matched with equal weight. Precision measures support for predicted events; Recall measures coverage of reference events.
+</li>
+<li><strong>FIOVA-DQ:</strong> the five human-event views guide importance rankings. Borda aggregation produces event weights, normalized separately on the prediction and reference sides.
+</li>
+</ul>
+<p>Bidirectional matching determines the supported prediction events and covered reference events. FIOVA-DQ sums their weights to obtain Precision and Recall, then takes their harmonic mean for each video's F1. Dataset-level Precision, Recall, and F1 are averaged separately across videos.
+</p>
+</div>
+<figure><a class="figure-link" href="static/images/current/event-weighting.png" aria-label="Enlarge: Worked FIOVA-DQ event weighting and matching example"><img src="static/images/current/event-weighting.png" alt="Worked FIOVA-DQ event weighting and matching example" loading="lazy" decoding="async" width="2400" height="1496"></a>
+<figcaption>Event extraction, human-guided weighting, and bidirectional support matching. <span class="zoom-hint">Select image to enlarge.</span>
+</figcaption>
+</figure>
+<details>
+<summary>What the event scores measure
+</summary>
+<div class="prose">
+<p>The scores measure event support and coverage. They do not independently guarantee correct temporal order: if the extracted events, matches, and weights remain unchanged, reversing an event sequence can leave AutoDQ and FIOVA-DQ unchanged. Lexical metrics and qualitative examples provide complementary views of wording and event relationships.
+</p>
+<p>UCG construction, reference-event extraction, and reference-side weighting are performed offline and reused. Prediction-side parsing, weighting, and matching are performed for each model caption.
+</p>
+</div>
+</details>
+</section>
+<section id="results" class="section">
+<div class="section-head"><span class="eyebrow">Benchmark results</span>
+<h2>Full-benchmark results
+</h2>
+</div>
+<div class="table-heading">
+<h3>Six baselines · 3,002 videos · 8 frames
+</h3>
+</div>
+<p class="scroll-hint">Swipe or scroll horizontally to view all columns.
+</p>
+<div class="table-scroll" role="region" aria-label="Six baselines · 3,002 videos · 8 frames" tabindex="0">
+<table id="table-full-benchmark">
+<caption>Manuscript Table III. Higher is better for each metric.
+</caption>
+<thead>
+<tr><th rowspan="2" scope="col">Model</th><th colspan="3" scope="colgroup">Lexical</th><th colspan="3" scope="colgroup">AutoDQ</th><th colspan="3" scope="colgroup">FIOVA-DQ</th>
+</tr>
+<tr><th scope="col">BLEU</th><th scope="col">METEOR</th><th scope="col">GLEU</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">Tarsier</th><td>0.043</td><td>0.265</td><td>0.119</td><td>0.372</td><td>0.283</td><td>0.284</td><td>0.416</td><td>0.285</td><td>0.279</td>
+</tr>
+<tr><th scope="row">VideoLLaMA2</th><td>0.030</td><td>0.268</td><td>0.088</td><td>0.320</td><td>0.245</td><td>0.236</td><td>0.355</td><td>0.250</td><td>0.239</td>
+</tr>
+<tr><th scope="row">LLaVA-NeXT-Video</th><td>0.020</td><td>0.270</td><td>0.060</td><td>0.326</td><td>0.221</td><td>0.224</td><td>0.356</td><td>0.229</td><td>0.227</td>
+</tr>
+<tr><th scope="row">Video-LLaVA</th><td>0.027</td><td>0.257</td><td>0.077</td><td>0.291</td><td>0.208</td><td>0.199</td><td>0.320</td><td>0.216</td><td>0.198</td>
+</tr>
+<tr><th scope="row">ShareGPT4Video</th><td>0.010</td><td>0.218</td><td>0.034</td><td>0.269</td><td>0.201</td><td>0.185</td><td>0.286</td><td>0.203</td><td>0.174</td>
+</tr>
+<tr><th scope="row">VideoChat2</th><td>0.037</td><td>0.281</td><td>0.098</td><td>0.344</td><td>0.237</td><td>0.239</td><td>0.379</td><td>0.243</td><td>0.241</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">F1 is the mean of per-video F1 values, not the harmonic mean of aggregate Precision and Recall. Each metric family is interpreted separately.
+</p>
+<div class="prose">
+<p>Tarsier has the highest FIOVA-DQ Precision, Recall, and F1 among the six baselines. VideoChat2 follows in FIOVA-DQ F1. The lexical metrics distinguish other aspects of the captions: VideoChat2 leads in METEOR, while Tarsier leads in BLEU and GLEU.
+</p>
+<h3>Agreement with human preferences
+</h3>
+<p>Forty participants rank six model captions for each of 60 videos. Comparing metric rankings with the aggregate human ranking shows stronger agreement for FIOVA-DQ in <strong>Recall and F1</strong>; Precision-based agreement is similar between the two metrics.
+</p>
+</div>
+<div class="table-heading">
+<h3>Mean Spearman correlation with human rankings
+</h3>
+</div>
+<p class="scroll-hint">Swipe or scroll horizontally to view all columns.
+</p>
+<div class="table-scroll" role="region" aria-label="Mean Spearman correlation with human rankings" tabindex="0">
+<table id="table-human-agreement">
+<caption>Manuscript Table IV and Appendix E-B.
+</caption>
+<thead>
+<tr><th scope="col">Metric</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">AutoDQ</th><td>0.198</td><td>0.215</td><td>0.264</td>
+</tr>
+<tr><th scope="row">FIOVA-DQ</th><td>0.188</td><td>0.371</td><td>0.426</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">Both metrics use the same videos with defined correlations: 60 for Precision, 57 for Recall, and 58 for F1. The full human-ranking protocol and paired analyses are in Appendix E-B.
+</p>
+<h3>Agreement with human rankings, video by video</h3><figure><a class="figure-link" href="static/images/current/human-agreement.png" aria-label="Enlarge: Paired human-ranking agreement"><img src="static/images/current/human-agreement.png" alt="Per-video Spearman agreement of AutoDQ and FIOVA-DQ with human rankings" width="2951" height="949" loading="lazy" decoding="async"></a><figcaption>Each point compares the two metrics on the same video. Points above the diagonal indicate stronger human alignment for FIOVA-DQ. <span class="zoom-hint">Select image to enlarge.</span></figcaption></figure>
+</section>
+<section id="compression" class="section">
+<div class="section-head"><span class="eyebrow">Analysis</span>
+<h2>How model behavior changes with human disagreement
+</h2>
+</div>
+<div class="prose">
+<p>Batch-Ranking first orders all videos by score separately for each model and metric. It then collects the <strong>same video's rank positions across the six models</strong>, computes their CV, and averages across the nine metrics. This measures relative rank dispersion, rather than mixing raw score scales.
+</p>
+</div>
+<figure><a class="figure-link" href="static/images/current/batch-ranking.png" aria-label="Enlarge: Current Batch-Ranking workflow with per-model video ranking"><img src="static/images/current/batch-ranking.png" alt="Current Batch-Ranking workflow with per-model video ranking" loading="lazy" decoding="async" width="2200" height="1152"></a>
+<figcaption>Batch-Ranking: human disagreement, model-specific video ranks, and their comparison. <span class="zoom-hint">Select image to enlarge.</span>
+</figcaption>
+</figure>
+<div class="prose">
+<h3>The complexity compression effect
+</h3>
+<p>Across all 3,002 videos, greater human disagreement is associated with lower model-side relative rank dispersion (<strong>Spearman ρ = −0.179</strong>). Mean model-side rank-CV is <strong>23.0% lower in High (F–H) than in Low (A–B)</strong>. The association remains negative under all six leave-one-component-out definitions, including the variant that excludes caption length.
+</p>
+<p>This is an overall relationship; it does not require every adjacent group to decrease monotonically. All six baselines have lower event Precision, Recall, and F1 in Group H than in Group A. Lower relative rank dispersion therefore accompanies reduced event support and coverage at these endpoints.
+</p>
+</div>
+<figure><a class="figure-link" href="static/images/current/rank-dispersion.png" aria-label="Enlarge: Current rank-dispersion results across human disagreement strata"><img src="static/images/current/rank-dispersion.png" alt="Current rank-dispersion results across human disagreement strata" loading="lazy" decoding="async" width="1800" height="706"></a>
+<figcaption>Relative model dispersion, human–model rank differences, and pooled Low/Mid/High comparisons. <span class="zoom-hint">Select image to enlarge.</span>
+</figcaption>
+</figure>
+<details>
+<summary>Caption length provides another view
+</summary>
+<figure><a class="figure-link" href="static/images/current/caption-length.png" aria-label="Enlarge: Correlations between model and human-caption lengths"><img src="static/images/current/caption-length.png" alt="Correlations between model and human-caption lengths" loading="lazy" decoding="async" width="1600" height="1078"></a>
+<figcaption>Description-length correlations across videos, computed separately within Groups A–H. Human1–Human5 are caption slots. <span class="zoom-hint">Select image to enlarge.</span>
+</figcaption>
+</figure>
+</details>
+<h3>Model scores across the full dataset and Groups A–H</h3><figure><a class="figure-link" href="static/images/current/group-performance.png" aria-label="Enlarge: Model scores across the full dataset and Groups A–H"><img src="static/images/current/group-performance.png" alt="Model scores across the full dataset and Groups A–H" width="2200" height="1932" loading="lazy" decoding="async"></a><figcaption>Six baseline models across the full benchmark and its disagreement strata. Precision, Recall, and F1 are lower in Group H than Group A for all six models, with local reversals in intermediate groups. <span class="zoom-hint">Select image to enlarge.</span></figcaption></figure>
+</section>
+<section id="hard" class="section">
+<div class="section-head"><span class="eyebrow">Stress test</span>
+<h2>Twelve models on FIOVA<sub>hard</sub>
+</h2>
+</div>
+<div class="table-heading">
+<h3>High-disagreement subset · 169 videos · 8 frames
+</h3>
+</div>
+<p class="scroll-hint">Swipe or scroll horizontally to view all columns.
+</p>
+<div class="table-scroll" role="region" aria-label="High-disagreement subset · 169 videos · 8 frames" tabindex="0">
+<table id="table-hard-8frames">
+<caption>Manuscript Table V. The six additional models are shown separately from the six full-benchmark baselines.
+</caption>
+<thead>
+<tr><th rowspan="2" scope="col">Model</th><th colspan="3" scope="colgroup">Lexical</th><th colspan="3" scope="colgroup">AutoDQ</th><th colspan="3" scope="colgroup">FIOVA-DQ</th>
+</tr>
+<tr><th scope="col">BLEU</th><th scope="col">METEOR</th><th scope="col">GLEU</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-row"><th colspan="10">Six full-benchmark baselines</th>
+</tr>
+<tr><th scope="row">Tarsier</th><td>0.040</td><td>0.258</td><td>0.116</td><td>0.348</td><td>0.222</td><td>0.236</td><td>0.364</td><td>0.210</td><td>0.214</td>
+</tr>
+<tr><th scope="row">VideoLLaMA2</th><td>0.026</td><td>0.259</td><td>0.085</td><td>0.265</td><td>0.171</td><td>0.165</td><td>0.294</td><td>0.164</td><td>0.155</td>
+</tr>
+<tr><th scope="row">LLaVA-NeXT-Video</th><td>0.020</td><td>0.264</td><td>0.062</td><td>0.294</td><td>0.156</td><td>0.163</td><td>0.323</td><td>0.152</td><td>0.157</td>
+</tr>
+<tr><th scope="row">Video-LLaVA</th><td>0.023</td><td>0.242</td><td>0.072</td><td>0.204</td><td>0.151</td><td>0.125</td><td>0.216</td><td>0.156</td><td>0.118</td>
+</tr>
+<tr><th scope="row">ShareGPT4Video</th><td>0.009</td><td>0.210</td><td>0.031</td><td>0.241</td><td>0.146</td><td>0.137</td><td>0.244</td><td>0.150</td><td>0.127</td>
+</tr>
+<tr><th scope="row">VideoChat2</th><td>0.032</td><td>0.268</td><td>0.095</td><td>0.293</td><td>0.185</td><td>0.187</td><td>0.317</td><td>0.180</td><td>0.179</td>
+</tr>
+<tr class="group-row"><th colspan="10">Six additional models</th>
+</tr>
+<tr><th scope="row">Tarsier2</th><td>0.048</td><td>0.272</td><td>0.128</td><td>0.299</td><td>0.225</td><td>0.212</td><td>0.389</td><td>0.273</td><td>0.247</td>
+</tr>
+<tr><th scope="row">InternVL-2.5</th><td>0.015</td><td>0.245</td><td>0.073</td><td>0.252</td><td>0.203</td><td>0.185</td><td>0.311</td><td>0.240</td><td>0.207</td>
+</tr>
+<tr><th scope="row">InternVL-3</th><td>0.016</td><td>0.248</td><td>0.075</td><td>0.224</td><td>0.204</td><td>0.175</td><td>0.276</td><td>0.221</td><td>0.181</td>
+</tr>
+<tr><th scope="row">Qwen2.5-VL</th><td>0.017</td><td>0.250</td><td>0.076</td><td>0.309</td><td>0.187</td><td>0.187</td><td>0.366</td><td>0.213</td><td>0.199</td>
+</tr>
+<tr><th scope="row">GPT-4o</th><td>0.023</td><td>0.262</td><td>0.087</td><td>0.296</td><td>0.243</td><td>0.231</td><td>0.390</td><td>0.296</td><td>0.268</td>
+</tr>
+<tr><th scope="row">Gemini-2.5-Flash</th><td>0.021</td><td>0.259</td><td>0.082</td><td>0.292</td><td>0.245</td><td>0.227</td><td>0.369</td><td>0.296</td><td>0.270</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="prose">
+<p>All six baselines have lower FIOVA-DQ Precision, Recall, and F1 on FIOVA<sub>hard</sub> than on the full benchmark. Tarsier's F1 decreases from <strong>0.279 to 0.214</strong>.
+</p>
+<p>Among the additional models, Gemini-2.5-Flash and GPT-4o obtain similar FIOVA-DQ F1 scores (<strong>0.270 and 0.268</strong>), followed by Tarsier2 (<strong>0.247</strong>). GPT-4o has higher Precision than Gemini-2.5-Flash, while their Recall values round to the same value. Similar F1 values can therefore accompany different balances of support and coverage.
+</p>
+<h3>Does adding frames help?
+</h3>
+<p>For FIOVA-DQ F1, GPT-4o and Qwen2.5-VL improve as the frame count increases. Tarsier peaks at 16 frames and then declines; InternVL-2.5 declines across the tested frame counts. The benefit depends on both the model and metric.
+</p>
+</div>
+<figure><a class="figure-link" href="static/images/current/frame-count.png" aria-label="Enlarge: Current frame-count comparison"><img src="static/images/current/frame-count.png" alt="Current frame-count comparison" loading="lazy" decoding="async" width="1800" height="1749"></a>
+<figcaption>Eight-, sixteen-, and thirty-two-frame comparisons for four models across nine metrics. <span class="zoom-hint">Select image to enlarge.</span>
+</figcaption>
+</figure>
+<details>
+<summary>Complete frame-count results
+</summary>
+<div class="table-heading">
+<h3>Four models · three frame counts
+</h3>
+</div>
+<p class="scroll-hint">Swipe or scroll horizontally to view all columns.
+</p>
+<div class="table-scroll" role="region" aria-label="Four models · three frame counts" tabindex="0">
+<table id="table-frame-count">
+<caption>Appendix Table A6. Mean scores across FIOVA<sub>hard</sub> videos.
+</caption>
+<thead>
+<tr><th rowspan="2" scope="col">Model</th><th rowspan="2" scope="col">Frames</th><th colspan="3" scope="colgroup">Lexical</th><th colspan="3" scope="colgroup">AutoDQ</th><th colspan="3" scope="colgroup">FIOVA-DQ</th>
+</tr>
+<tr><th scope="col">BLEU</th><th scope="col">METEOR</th><th scope="col">GLEU</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">Tarsier</th><td>8</td><td>0.040</td><td>0.258</td><td>0.116</td><td>0.348</td><td>0.222</td><td>0.236</td><td>0.364</td><td>0.210</td><td>0.214</td>
+</tr>
+<tr><th scope="row">Tarsier</th><td>16</td><td>0.046</td><td>0.280</td><td>0.117</td><td>0.301</td><td>0.247</td><td>0.235</td><td>0.377</td><td>0.293</td><td>0.272</td>
+</tr>
+<tr><th scope="row">Tarsier</th><td>32</td><td>0.044</td><td>0.280</td><td>0.115</td><td>0.266</td><td>0.233</td><td>0.213</td><td>0.336</td><td>0.258</td><td>0.224</td>
+</tr>
+<tr><th scope="row">InternVL-2.5</th><td>8</td><td>0.015</td><td>0.245</td><td>0.073</td><td>0.252</td><td>0.203</td><td>0.185</td><td>0.311</td><td>0.240</td><td>0.207</td>
+</tr>
+<tr><th scope="row">InternVL-2.5</th><td>16</td><td>0.017</td><td>0.252</td><td>0.075</td><td>0.249</td><td>0.190</td><td>0.175</td><td>0.328</td><td>0.225</td><td>0.203</td>
+</tr>
+<tr><th scope="row">InternVL-2.5</th><td>32</td><td>0.014</td><td>0.249</td><td>0.072</td><td>0.239</td><td>0.201</td><td>0.171</td><td>0.308</td><td>0.230</td><td>0.186</td>
+</tr>
+<tr><th scope="row">Qwen2.5-VL</th><td>8</td><td>0.017</td><td>0.250</td><td>0.076</td><td>0.309</td><td>0.187</td><td>0.187</td><td>0.366</td><td>0.213</td><td>0.199</td>
+</tr>
+<tr><th scope="row">Qwen2.5-VL</th><td>16</td><td>0.022</td><td>0.263</td><td>0.082</td><td>0.278</td><td>0.194</td><td>0.185</td><td>0.343</td><td>0.229</td><td>0.207</td>
+</tr>
+<tr><th scope="row">Qwen2.5-VL</th><td>32</td><td>0.022</td><td>0.275</td><td>0.079</td><td>0.305</td><td>0.204</td><td>0.201</td><td>0.378</td><td>0.241</td><td>0.226</td>
+</tr>
+<tr><th scope="row">GPT-4o</th><td>8</td><td>0.023</td><td>0.262</td><td>0.087</td><td>0.296</td><td>0.243</td><td>0.231</td><td>0.390</td><td>0.296</td><td>0.268</td>
+</tr>
+<tr><th scope="row">GPT-4o</th><td>16</td><td>0.019</td><td>0.272</td><td>0.059</td><td>0.307</td><td>0.276</td><td>0.254</td><td>0.378</td><td>0.325</td><td>0.294</td>
+</tr>
+<tr><th scope="row">GPT-4o</th><td>32</td><td>0.016</td><td>0.269</td><td>0.057</td><td>0.314</td><td>0.279</td><td>0.256</td><td>0.394</td><td>0.327</td><td>0.298</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</section>
+<section id="examples" class="section">
+<div class="section-head"><span class="eyebrow">Dataset demo</span><h2>One video, five descriptions, one consensus</h2></div>
+<div class="prose"><p>Watch a video, compare the five independent human descriptions, and read its UCG. The descriptions are shown as recorded in the example materials. Human 1–5 identify caption slots for the selected video.</p></div>
+<label for="example-select">Choose a video</label><select id="example-select"><option value="example-bicycle">A boy and his bicycle</option><option value="example-baseball">A baseball game and its spectators</option><option value="example-artistic">Reading, dancing, and changing scenes</option><option value="example-party">A party across several scenes</option><option value="example-martial-arts">A martial-arts demonstration</option><option value="example-conversation">A conversation across alternating shots</option></select>
+<noscript><p>All six videos and their descriptions appear below.</p></noscript>
+<article id="example-bicycle" class="example">
+<h3>A boy and his bicycle</h3>
+<video controls playsinline preload="none" poster="static/images/current/bicycle-poster.jpg" aria-label="A boy and his bicycle"><source src="static/videos/bicycle.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+<div class="demo-captions"><h3>Five independent human descriptions</h3><div class="human-caption"><h4>Human 1</h4><p>A little gray boy is riding a bike. After a distance, the bike suddenly falls. The boy comes down from the bike, goes to the side, lies on the ground, pretending to fall. After a while, He reachs out his hand.</p></div>
+<div class="human-caption"><h4>Human 2</h4><p>A child sits on a bicycle seat to take it away. He releases his hand, and the bike turns over the right. He takes out his right leg and walks a few steps and falls to the ground. Then he stretches out his right hand pointing to the lens.</p></div>
+<div class="human-caption"><h4>Human 3</h4><p>A boy on the road is riding a small two-wheeled car, after driving a distance the child stops, the car falls to the ground, the boy comes down from the car, he lies on the road. The little boy lying on the floor strokes his hand and cries.</p></div>
+<div class="human-caption"><h4>Human 4</h4><p>A child wearing a hat is riding on a baby carriage  forward, and then the car falls, the child stands for a while and falls off when he crosses his leg out from the car. The child is lying on the ground and then pointing to the camera by a finger.</p></div>
+<div class="human-caption"><h4>Human 5</h4><p>During the day, a little boy wearing a helmet is riding a bike without pedals,using feet to support forward. The boy release his hand, the bike tilted down under the boy. The boy stands and looks down at the bike. The boy crosses the car and goes to the side and falls to the ground. The boy smiles and reaches out his hand.</p></div>
+<div class="consensus-caption"><h3>Unified Consensus Groundtruth (UCG)</h3><p>A young boy is riding a bike down a road. As he rides, the bike suddenly falls over. The boy then gets off the bike, lies on the ground, and pretends to fall. After a moment, the boy smiles and reaches out his hand.</p></div></div>
+</article><article id="example-baseball" class="example">
+<h3>A baseball game and its spectators</h3>
+<video controls playsinline preload="none" poster="static/images/current/baseball-poster.jpg" aria-label="A baseball game and its spectators"><source src="static/videos/baseball.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+<div class="demo-captions"><h3>Five independent human descriptions</h3><div class="human-caption"><h4>Human 1</h4><p>Three men are standing on the sidelines and watching the game. A white dress man throws the ball, and another gray dress man swings the bat. He does not hit the ball, and the bat flies out.Another  gray dress man receives the bat on the sidelines. A green dress woman stands up and kisses the gray dress man. A gray dress man comes over to talk with the green dress woman. The video is repeatedly played from different angles.</p></div>
+<div class="human-caption"><h4>Human 2</h4><p>Several red dress men stand on the sidelines of the baseball field. A white dress athletes in the middle of the field pitches the ball,and  another white dress player waves the bat. And the bat flies out. And he lifts his arms to look far away.  A gray dress man stands in the auditorium.He smiles and holds a bat.The woman next to him stands up and kisses his cheek. A black dress man comes from the back row,and the woman turns back to talk with him. The lens replays the scene of bat flying out. The bat is caught by the gray dress man in the auditorium. The scene of catching the bat is replayed in slow motion. The whole process is replayed again.</p></div>
+<div class="human-caption"><h4>Human 3</h4><p>There are several men stand outside the ball park. There are several players in the ball park playing baseball. After a player has thrown the ball, the opposing player hits the baseball with bat and throws the bat away.Outside the ball park, a woman kisses the man smiling and standing with the bat in his hand.A man comes from behind and talks something to a woman. The lens replays the scene that the player throws out the bat and the man outside the pitch catches the bat.</p></div>
+<div class="human-caption"><h4>Human 4</h4><p>Three men wearing a red hat watches the ball on the sidelines. An athlete throws a ball on the ball part, the opposing players hits the ball and throws the bat to the audience. The bat is received by a man wearing  short-sleeves. A woman next to him kisses the short-sleeved man. A man wearing a hat comes next to the woman and talks to her. And then the video just now is played in a slow motion.</p></div>
+<div class="human-caption"><h4>Human 5</h4><p>During the day, several men wearing red hats stand on the sidelines of the ball park. On the pitch, the pitcher throws the ball and the baseball player hits the ball with bat. The bat is threw out. The players watch the bat flying out. In the auditorium, a man holds a bat,and a woman next to him kisses his cheek. The people around applaud.  The scene of the bat being threw out and the man catching the bat is replayed in a slow motion.</p></div>
+<div class="consensus-caption"><h3>Unified Consensus Groundtruth (UCG)</h3><p>Several men in red hats stand on the sidelines of a baseball game, watching as the pitcher throws the ball and the batter hits it, sending the bat flying. In the stands, a man catches the bat thrown from the field, while a woman kisses him on the cheek. Another man approaches the woman and appears to engage in conversation. The video clip is replayed multiple times, showing the action from different angles and in slow motion.</p></div></div>
+</article><article id="example-artistic" class="example">
+<h3>Reading, dancing, and changing scenes</h3>
+<video controls playsinline preload="none" poster="static/images/current/artistic-poster.jpg" aria-label="Reading, dancing, and changing scenes"><source src="static/videos/artistic.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+<div class="demo-captions"><h3>Five independent human descriptions</h3><div class="human-caption"><h4>Human 1</h4><p>A woman wearing a small glasses is reading books. A woman wearing a big glasses is looking forward. A man sitting beside a lot of books and holding a book looks at the front.  The woman wearing big glasses lies on the ground. A group of cranes walk by,  a man and a woman dancing behind. A woman in pink  walks,  a man and a woman dancing behind. A black woman lies down and reads, a red dress woman sitting in a chair looks at the right. The woman with big glasses waves around the crane.  A man wearing glasses is reading. The pink dress woman is walking through, the man wearing glasses is reading, the black woman is lying on a black and white shirt and reading. A man wearing a hat  dances and walks through the black man upside down. A woman is lying next to a group of cranes. A woman steps on the book and walks. The woman in pink is dancing and walking through, a crane also comes.</p></div>
+<div class="human-caption"><h4>Human 2</h4><p>The lens sweeps a lady from top to bottom, and then there appears a woman with curly  hair. A man is wearing a suit, the man lying down is looking at her. Lens switch, the lady is lying on the floor, a group of white flamingos walk by, someone  next to them is dancing. A man and a woman push around, the first lady appears lying down and reading, the man in suit also wears glasses reading, the curly hair women and flamingos are dancing, someone next to them stretches his leg doing exercise.</p></div>
+<div class="human-caption"><h4>Human 3</h4><p>In a yard, a black-skinned woman is carrying a bag in the hands and reading a book, another long-haired woman is staring at the camera. A woman wearing a suit is lying on the stool, holding A book and looks at the lens, the long hair woman is lying on the carpet. A group of birds walk through the hall, a red dress man pushes a blonde woman away, the black skin woman next to him sitting to the side reads, another woman with black skin is lying down and reading. A woman wearing a red hat is sitting to the side, the long hair woman shakes hands, a woman in suit wears glasses, another woman wearing a striped shirt lies next to the carpet. The man in red keeps beating, A woman lying on the table raises her legs, the long hair woman is lying on the carpet, a pink dress woman is shaking the body and walking through.</p></div>
+<div class="human-caption"><h4>Human 4</h4><p>A woman standing next to some leaves. A woman is lying on the ground. Some geese are walking. A man and a woman are talking. A man is reading a book. A woman is sitting in a chair. A woman is waving her hands. A man is wearing glasses. Several people are lying on the ground. A man is leaning up and a man is walking by his side.</p></div>
+<div class="human-caption"><h4>Human 5</h4><p>A woman carrying a bag is standing  and reading. A woman wearing glasses looks at the camera. A person holding a book looks at the woman. The woman wearing glasses is lying on the ground. Several people are dancing, a person is lying down and reading, a person is sitting on a chair. A man is waving his hands. The reading people wears the glasses. A man jumps forward and looks at another person who stands on the stool. The women with glasses is lying on the ground. A person steps on the book. Everyone does their own thing.</p></div>
+<div class="consensus-caption"><h3>Unified Consensus Groundtruth (UCG)</h3><p>A diverse group of individuals are shown in a video clip. A woman with small glasses is reading a book, while a woman with big glasses looks for-ward. A man surrounded by books holds a book and gazes ahead. The woman with big glasses lies on the ground as a group of cranes walk by, with a man and woman dancing behind. Another scene shows a woman in pink walking, with a man and woman dancing behind. A black woman is seen lying down and reading, while a woman in a red dress sits in a chair looking to the right. The woman with big glasses waves around a crane. A man wearing glasses reads a book. The woman in pink continues walking, while the man wearing glasses reads, and the black woman lies on a black and white shirt reading. A man wearing a hat dances and walks as another man is upside down. A woman is lying next to a group of cranes, and another woman steps on a book as she walks. The woman in pink dances and walks, and a crane is also present. The video also shows a scene where a lady is swept from top to bottom, followed by a woman with curly hair. A man in a suit is looking at her, while someone else is lying down. The lens switches to the lady lying on the floor, as a group of white flamingos walk by and someone dances. A man and woman push each other, and the initial lady appears lying down and reading, along with the man in the suit reading. The curly-haired woman and flamingos dance as someone exercises. In another part of the video, a black-skinned woman is seen carrying a bag and reading a book next to a long-haired woman looking at the camera. A woman in a suit lies on a stool and holds a book, while a group of birds walk through the hall. A man in a red dress pushes a blonde woman, with the black-skinned woman reading nearby. Another black-skinned woman is lying down and reading, while a woman in a red hat sits to the side, and a woman with long hair shakes hands. A woman in a suit with glasses sits next to a woman in a striped shirt lying down. The man in red keeps moving, a woman lying on a table raises her legs, the long-haired woman is on the ground, and another woman in a pink dress is shaking and walking. In another scene, a woman stands next to some leaves, while a woman lies on the ground and geese are walking by. A man and woman talk, a man reads a book, a woman sits in a chair, and a woman waves her hands. The man in glasses is reading, several people lie down, a man leans up, and a man walks by. Another scene shows a woman carrying a bag and reading, a woman with glasses looking at the camera, a person holding a book gazing at a woman, and the woman with glasses lying on the ground. Several people dance, another person reads while lying down, one person sits on a chair, and a man waves his hands. The readers wear glasses as a man jumps forward to look at another person standing on a stool. The woman with glasses is still on the ground, while another person steps on a book. Each individual is captured doing their own activity in the video clip.</p></div></div>
+</article><article id="example-party" class="example">
+<h3>A party across several scenes</h3>
+<video controls playsinline preload="none" poster="static/images/current/party-poster.jpg" aria-label="A party across several scenes"><source src="static/videos/party.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+<div class="demo-captions"><h3>Five independent human descriptions</h3><div class="human-caption"><h4>Human 1</h4><p>A woman is sitting, and several people are sitting together. The table is covered with bread. The other three are standing. The woman looks at the camera. At a party, the woman laughs.</p></div>
+<div class="human-caption"><h4>Human 2</h4><p>A woman holding a cup sits on the steps. Several people are sticking papers to the balloon. There are food on the table. A cake in one man’s hand falls to the ground. At another party, the woman holds a windmill in her hand. There are food on the table. The children run around.</p></div>
+<div class="human-caption"><h4>Human 3</h4><p>A woman dressed in white holding a cup sitting. She looks to somewhere else.There is  a dining table next to her.She is holding a corn and eating. She gives some food to the girls then she smiles.</p></div>
+<div class="human-caption"><h4>Human 4</h4><p>A black woman sits on the steps, bread is putted on the table, a black man throws the hamburger on the ground. Many people play together, there are corn and burger on the table, some little girls run to her and talk with her.</p></div>
+<div class="human-caption"><h4>Human 5</h4><p>A woman is sitting in a seat with a glass of water. A man squeezed the tomato sauce on the cake and the cake falls to the ground. Woman is holding a windmill. A group of people are dining. There are a variety of foods on the table. A group of children run around on the lawn.</p></div>
+<div class="consensus-caption"><h3>Unified Consensus Groundtruth (UCG)</h3><p>A woman is sitting at a party, looking at the camera and laughing. Several people are sitting together at a table covered with bread while others are standing. Meanwhile, a cake falls to the ground as a man tries to stick papers to a balloon. The woman then holds a windmill and interacts with children running around. There are various foods on the table, including corn, burgers, and a tomato sauce squeezed on a cake.</p></div></div>
+</article><article id="example-martial-arts" class="example">
+<h3>A martial-arts demonstration</h3>
+<video controls playsinline preload="none" poster="static/images/current/martial-arts-poster.jpg" aria-label="A martial-arts demonstration"><source src="static/videos/martial-arts.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+<div class="demo-captions"><h3>Five independent human descriptions</h3><div class="human-caption"><h4>Human 1</h4><p>man in white falls down to the ground and keeps speaking. His right leg is under the crotch of the man in black who is kneeling down.  the right foot of the man in black  is on the ground.  man in white holds trousers of the man in black.  the man wears black dress,the man &#x27;s right leg  restores the original action.  Man in white is on the right side of his body, he puts his left foot on his right foot, left hand holds the left shoulder of  the man in black , then he uses his left leg to  draw a circle and  pulls the man in black to the left rear. His left hand seizes the left arm of the man in black,he raises his right beg to turn the man in black over. His right hand presses the left arm of the man in black to his back, conversation is over.</p></div>
+<div class="human-caption"><h4>Human 2</h4><p>In a judo field, a man in black stands between the legs of the man in white and raises his arms,the man in white lies on the ground, the white man lies on the ground and speaks. He touches the shanks of the man in black and puts him on the ground. His legs clamps the thigh of the man in black, his left hand is on the left shoulder of the man in black, the man in black lies on him,the body of the man in white turns over, he throws the man in black down to the ground and hugs  his arm.</p></div>
+<div class="human-caption"><h4>Human 3</h4><p>a man in white lies on the ground and talks,  man in black kneels down in front of him. the man in black raises his leg and crosses  with one leg of the man in white. man in white pulls the pants of the man in black, and pulls his legs down to the ground. Then the  man in white lifts another leg to hit the chest of the man in black, and  pushes his shoulders with his hands. After the white man stretching his legs twice, he raises his legs  bypass the head of the man in black, with leveraging knocks down the man in black. After then, the  man in  white uses the leveraging again,  turns over the man in black, he takes advantage of this opportunity and gets up, locks his arms. He releases the man in black.</p></div>
+<div class="human-caption"><h4>Human 4</h4><p>the man in white and the man in black perform to  explain the action essentials. man in white lies on the ground, the  man in black presses him. The man in white gives a sigh to the man in black to loosen his legs and expose legs&#x27; movements. They restore the original action, the man in white pulls down the  man in black,and puts his leg across the man in black.  man in white explains the action shortly, turns over and presses the man in black to the ground.</p></div>
+<div class="human-caption"><h4>Human 5</h4><p>a man in white lies on the ground, a  man in black lies on  him,the man in white points,and explains where to puts hands and feet.and then demonstrates how to turn over the man in black, and man in white  continues to show how presses man in black under his body,  and shows how to controls the hands of his opponent. The two separate.</p></div>
+<div class="consensus-caption"><h3>Unified Consensus Groundtruth (UCG)</h3><p>In a judo field, a man in black demonstrates various techniques on a man in white. The man in white lies on the ground as the man in black manipulates his limbs and demonstrates how to control the opponent. They go through the actions of turning over, pressing down, and locking arms before separating.</p></div></div>
+</article><article id="example-conversation" class="example">
+<h3>A conversation across alternating shots</h3>
+<video controls playsinline preload="none" poster="static/images/current/conversation-poster.jpg" aria-label="A conversation across alternating shots"><source src="static/videos/conversation.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+<div class="demo-captions"><h3>Five independent human descriptions</h3><div class="human-caption"><h4>Human 1</h4><p>A white dress man holds a bell and looks at the camera. The man  wearing a down jacket looks at the camera and speaks. The man shakes the bell. Screen switches back and forth. The man sits on the couch and speaks with a microphone.</p></div>
+<div class="human-caption"><h4>Human 2</h4><p>A man in the room holds a camera and talks.The man wears a gray coat. Another man sits on the couch.The man shakes the bell in the hands.The man wears a white sweater. The man speaks to microphone.The man   takes photographs of the part below his head with the phone.</p></div>
+<div class="human-caption"><h4>Human 3</h4><p>A white dress man looks at the camera. A gray dress man talks to the camera.The white dress man talks to the camera, and shakes the hands of the toys.The gray dress man talks.The  white dress man talks and shakes the toy in hands .The gray dress man talks and the white dress man talks.The gray dress man talks and the white dress man holds the microphone to speak and shake hands. The gray dress man talks and the white dress man talks. The gray dress man nods and speaks.</p></div>
+<div class="human-caption"><h4>Human 4</h4><p>In a room filled with lanterns, a man&#x27;s left hand holds a rattling in the face of the lens to say something. In the next picture, the man holds the self-timer opposite to himself.The name of the festival appears continuously above the screen.In the next picture the man  holds the walkie -talkie in the right hand and  still faces the lens and talks.</p></div>
+<div class="human-caption"><h4>Human 5</h4><p>A white dress man holds a bell. Indoors, a man wearing a gray coat talks.The white dress man talks and rattles bells. A man wearing gray clothes speaks. The man in white talks and rattles bells. The man in gray speaks.The white dress man talks and rattles bells. The gray dress man speaks. The white dress man puts a black object in front of his mouth, shakes his hand and smiles.The man in gray speaks and the white dress man talks.  The gray dress man nods and smiles.</p></div>
+<div class="consensus-caption"><h3>Unified Consensus Groundtruth (UCG)</h3><p>A man in a white dress holds a bell and talks to the camera, while another man in a gray coat also speaks. They take turns speaking and shaking the bell. The man in white also holds a microphone and shakes a toy. In a room filled with lanterns, the man takes selfies and holds a walkie-talkie while continuing to talk to the camera.</p></div></div>
+</article>
+</section>
+<section id="discussion" class="section">
+<div class="section-head">
+<h2>What the benchmark helps distinguish
+</h2>
+</div>
+<div class="prose">
+<p>FIOVA separates the support received by predicted events from the coverage of reference events, and uses human descriptions to estimate which events matter more. Human-ranking comparisons assess whether these scores follow human judgments; disagreement strata show how performance changes across videos.
+</p>
+<p>The video demos let readers compare individual descriptions with the consensus reference, including which actions each description selects and how it connects events across scenes.
+</p>
+<p>Possible pretraining overlap remains relevant to interpreting absolute scores and cross-model comparisons. The study does not include a model-specific empirical contamination test; source documentation and construction safeguards are described in Appendix B-A.
+</p>
+</div>
+</section>
+<section id="resources" class="section">
+<div class="section-head">
+<h2>Dataset and contact
+</h2>
+</div>
+<div class="resource-links"><a href="https://huggingface.co/datasets/huuuuusy/FIOVA"><strong>FIOVA dataset</strong><span>Videos, annotations, and benchmark resources on Hugging Face</span></a><a href="mailto:shiyu.hu@ntu.edu.sg"><strong>Contact the team</strong><span>Questions about the dataset and evaluation</span></a>
+</div>
 
-            <div class="column has-text-centered">
-              <div class="publication-links">
-
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2410.15270" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span> -->
-
-                <span class="link-block">
-                  <a href="https://huggingface.co/datasets/huuuuusy/FIOVA"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                        <i class="fas fa-file-archive"></i>
-                    </span>
-                    <span>Dataset</span>
-                    </a>
-                </span>
-
-
-              </div>
-            </div>
-             
-
-            
-  
-            <!-- Sub Title -->
-            <h2 class="title is-5 publication-title">
-              Beyond single-reference evaluation, FIOVA models multi-annotator diversity, unified consensus groundtruth (UCG),
-              and cognitively weighted metrics (FIOVA-DQ) to diagnose the gap between human and LVLM understanding of subjective long videos.
-            </h2>
-  
-            <!-- Contact -->
-            <h2 class="title is-6 publication-title">
-              Benchmark &amp; tools maintained by
-              <a href="https://huuuuusy.github.io/" target="_blank">Shiyu Hu</a> and 
-              <a href="https://github.com/Xuchen-Li" target="_blank">Xuchen Li</a>
-            </h2>
-  
-            <!-- Latest News -->
-            <div class="columns is-centered has-text-centered">
-              <div class="column is-four-fifths">
-                <div class="content has-text-justified">
-                  <h3 class="head-h2" style="margin-bottom: 0.5em; color: rgb(255, 93, 93);">
-                    Latest News
-                  </h3>
-                  <ul>
-                    <li>[2025.11.07] Project content and experimental analyses updated.</li>
-                    <li>[2025.05.15] Official FIOVA homepage released with dataset and cognitively grounded benchmark resources.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-  
-          </div> <!-- column -->
-        </div> <!-- columns -->
-      </div> <!-- container -->
-    </div> <!-- hero-body -->
-  </section>
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="columns is-centered">
-              <figure>
-                <img src="static/images/f1.png" style="width:100%" alt="Figure 0">
-              </figure>
-          </div>
-        </div>
-      </div> 
-    </div>
-    <br>    <br>
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Evaluating large vision-language models (LVLMs) for long-video understanding remains challenging, as human interpretations of the same content differ in attention, segmentation, and expression.
-            </p>
-            <p>
-              This diversity highlights the limitations of traditional single-reference or lexical metrics that fail to reflect both variation and consensus in human understanding.
-            </p>
-            <p>
-              To address this issue, we propose a <strong>cognitively grounded group-consensus evaluation paradigm</strong> that models objectivity through quantified human consensus. Within this paradigm, we construct <strong>FIOVA</strong> (<strong>F</strong>ive-<strong>I</strong>n-<strong>O</strong>ne <strong>V</strong>ideo <strong>A</strong>nnotations), a benchmark of 3,002 medium-to long-duration videos, each annotated by five humans to represent distinct cognitive perspectives. Through a <strong>Unified Consensus Groundtruth (UCG)</strong> process, these heterogeneous annotations are merged into stable and interpretable consensus anchors that connect subjective diversity with reproducible evaluation.
-            </p>
-            <p>
-              Building on this foundation, we design <strong>FIOVA-DQ</strong>, an event-weighted metric that integrates human attentional weighting to achieve cognitively faithful alignment between LVLM outputs and human consensus. Experiments on nine representative LVLMs reveal a consistent <em>complexity compression effect</em>: as semantic complexity increases, human descriptions become more diverse while model outputs converge toward uniform templates, indicating a structural gap between adaptive human cognition and regularized model reasoning.
-            </p>
-            <p>
-              <strong>FIOVA</strong> provides a reproducible and cognitively interpretable framework that unifies human diversity and consensus in evaluation, offering a principled basis for advancing LVLMs' cognitive alignment. 
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  <!-- </section>
-  <section class="section"> -->
-    <br>
-    <br>
-    <div class="container is-max-desktop">
-      <!-- Method -->
-      <!-- <br /> -->
-      <div style="text-align:center">
-        <h2 class="title is-3">Our Contributions</h2>
-      </div>
-      <div class="content has-text-justified">
-        <br>
-        <p><b>(1) Paradigm and Benchmark:</b> We establish a <b>cognitively grounded group-consensus paradigm</b> that treats subjectivity as a structured, learnable distribution rather than random annotation noise. Under this paradigm, we construct <b>FIOVA</b>, a large-scale 5× multi-annotator benchmark of <b>3,002</b> videos (average duration <b>33.6s</b>), where a <b>Unified Consensus Groundtruth (UCG)</b> process captures both cognitive diversity and convergence. This paradigm bridges the cognitive gap between algorithmic objectivity and human subjectivity, transforming evaluation from textual alignment to cognitive alignment.</p>
-
-        <p><b>(2) Evaluation Framework:</b> We develop <b>FIOVA-DQ</b>, an event-weighted metric that introduces human-derived attentional weighting to evaluate fine-grained <em>cognitive alignment</em> between LVLM outputs and human consensus. We further design a <b>batch evaluation protocol</b> that integrates lexical, event-based, and cognitively weighted metrics for distribution-level assessment of model robustness and human–machine coherence. This framework establishes a closed-loop connection between human cognition modeling, LVLM response generation, and cognitively interpretable evaluation.</p>
-        
-        <p><b>(3) Systematic Analysis:</b> Through extensive evaluation on nine representative LVLMs (VideoLLaMA2, Video-LLaVA, LLaVA-NEXT-Video, Tarsier, VideoChat2, ShareGPT4Video, InternVL-2.5, Qwen2.5-VL, and GPT-4o) across varying levels of semantic and narrative complexity, we reveal the <em>complexity compression effect</em>: as video complexity increases, human annotations diversify while model outputs converge toward template-like regularities. This phenomenon reflects a structural misalignment between adaptive human cognition and over-regularized model reasoning, highlighting cognitive alignment as a critical frontier for long-video evaluation.</p>
-        
-
-        <div style="text-align:center">
-          <h2 class="title is-3">Construction of the FIOVA Dataset</h2>
-        </div>
-        <div class="content has-text-justified">
-          <br>
-          <p>
-            <b>Operationalizing cognition.</b> FIOVA (<b>F</b>ive-<b>I</b>n-<b>O</b>ne <b>V</b>ideo <b>A</b>nnotations) is designed to capture the <em>subjectivity–consensus duality</em> of long-video understanding. We curate <b>3,002</b> medium-to-long videos spanning <b>38 themes</b>, and ask <b>five independent annotators</b> per video to describe the visual stream (audio is removed). This yields <b>15,010</b> human captions plus <b>3,002</b> consensus references, providing a dual-axis view of <b>subjective diversity</b> (individual captions) and <b>shared cognition</b> (consensus anchors).
-          </p>
-
-          <div class="columns is-centered">
-            <figure>
-              <img src="static/images/f1.png" alt="Overview of the FIOVA construction pipeline">
-            </figure>
-          </div>
-
-          <p>
-            <b>Pipeline from distribution to consensus.</b> The construction pipeline combines multi-human annotation, strict quality control, and <b>cognitive stratification</b> before synthesizing a <b>Unified Consensus Groundtruth (UCG)</b> for each video. An LLM-mediated procedure semantically fuses the five captions into a stable, neutral reference that preserves cross-annotator invariants while minimizing stylistic bias. Manual audits confirm that the UCG balances detail, temporal logic, and factual fidelity, making it a reliable cognitive anchor for evaluation (see the illustration below).
-          </p>
-
-          <div class="columns is-centered">
-            <figure>
-              <img src="static/images/f6.png" alt="Illustration of consensus synthesis and event weighting">
-            </figure>
-          </div>
-
-          <p>
-            <b>Quantifying cognitive variability.</b> To turn disagreement into a measurable signal, we score every human caption along five semantic dimensions—<b>consistency, context, correctness, detail orientation,</b> and <b>temporality</b>—and combine with caption length tocompute a composite <b>coefficient of variation (CV)</b>. The resulting distribution defines <b>eight cognitive strata (Groups A–H)</b> that range from high consensus to high divergence. We designate <b>FIOVA<sub>hard</sub></b> as Groups F–H, which exhibit frequent scene transitions, multi-perspective narratives, and low human agreement, providing stress tests for cognitively demanding scenarios.
-          </p>
-
-          <p>
-            <b>Statistics and coverage.</b> FIOVA’s paragraph-level captions average <b>63.3 words</b>—<b>4–15×</b> longer than existing benchmarks (Table&nbsp;1)—and exhibit rich correlations with video duration and event density. Word clouds contrasting individual annotators with the UCG reveal how consensus emphasizes core events while retaining stylistic dispersion. Together, these statistics show how FIOVA covers both the breadth of human perception and the depth of shared understanding, laying the foundation for cognitively grounded evaluation in next section.
-          </p>
-
-          <div class="columns is-centered">
-            <figure>
-              <img src="static/images/t1.png" alt="Comparison of video captioning datasets and annotation statistics">
-            </figure>
-          </div>
-        </div>
-        
-
-        <div style="text-align:center">
-          <h2 class="title is-3">LVLMs Response Collection</h2>
-        </div>
-        <div class="content has-text-justified">
-          <br>
-          <p>
-            Building on the human consensus references from Step&nbsp;1, we collect LVLM-generated captions under harmonized conditions. We evaluate nine representative models that span prevailing design families: six open-source systems—<b>VideoLLaMA2</b>, <b>Video-LLaVA</b>, <b>LLaVA-NEXT-Video</b>, <b>Tarsier</b>, <b>VideoChat2</b>, and <b>ShareGPT4Video</b>—plus three proprietary or frontier models—<b>InternVL-2.5</b>, <b>Qwen2.5-VL</b>, and <b>GPT-4o</b> (the latter restricted to <b>FIOVA<sub>hard</sub></b>). All models follow a unified prompt template and are supplied with identical 8-frame clips, ensuring fair comparison across architectures.
-          </p>
-          <p>
-            Inference settings are harmonized whenever interfaces permit: a maximum output length of 1,024 tokens, model-specific decoding parameters (for example, temperature 0.2 for VideoLLaMA2, 1.0/0.9 top-p for VideoChat2 and ShareGPT4Video, 0.1 for Video-LLaVA, and deterministic decoding for Tarsier and LLaVA-NEXT-Video) and fixed random seeds. This protocol yields <b>18,012</b> video–caption pairs that align human references with machine summaries, capturing heterogeneous verbosity and reasoning styles that serve as inputs for cognitively aligned evaluation.
-          </p>
-          <p>
-            To probe robustness under high cognitive divergence, we additionally evaluate the frontier models on <b>FIOVA<sub>hard</sub></b> (Groups F–H), which comprise videos with multi-perspective narratives, rapid transitions, and low human agreement. This stress-test subset, together with the full corpus, enables nuanced analysis of model behaviour across semantic complexity levels.
-          </p>          
-          <p>
-            The resulting response collection underpins the cognitively aligned evaluation framework detailed below, allowing us to study human–model alignment across linguistic, structural, and cognitive dimensions.
-          </p>
-        </div>
-        
-        
-        <div style="text-align:center">
-          <h2 class="title is-3">Cognitively Aligned Evaluation Framework</h2>
-        </div>
-        <div class="content has-text-justified">
-          <br>
-          <p>
-            We link human consensus cognition to LVLM behaviour through a three-layer evaluation stack. At the <b>linguistic layer</b>, conventional metrics such as BLEU, METEOR, and GLEU offer reproducible surface-level comparison between model outputs and human references. The <b>structural layer</b> adopts event-based AutoDQ to decompose captions into aligned event units, enabling explicit reasoning about semantic coverage and narrative ordering. Building upon this representation, the <b>cognitive layer</b> introduces <b>FIOVA-DQ</b>, which weights events by human attentional agreement so that cognitively central information contributes more strongly to precision, recall, and F1.
-          </p>
-          <p>
-            <b>Table&nbsp;3</b> summarises the tri-layer results. Models such as <b>Tarsier</b> excel in recall-oriented behaviour under AutoDQ and FIOVA-DQ, demonstrating strong event coverage but lower precision due to over-generation. <b>ShareGPT4Video</b> shows the opposite tendency, producing concise descriptions with high precision yet sacrificing recall. <b>VideoLLaMA2</b> and <b>LLaVA-NEXT-Video</b> fall between these extremes, highlighting trade-offs that become visible only when lexical, structural, and cognitive views are analysed together.
-          </p>
-          <p>
-            Importantly, <b>FIOVA-DQ</b> achieves the strongest correlation with human preference (Spearman ρ&nbsp;=&nbsp;0.579), validating the role of cognitive weighting in capturing human judgments. This layered framework therefore provides both fine-grained diagnostic information and an aggregated view of human–model alignment.
-          </p>
-          <p>
-            By fusing lexical overlap, event-structured analysis, and human-attention weighting, the framework extends beyond traditional metrics and lays the groundwork for distribution-level diagnostics introduced next.
-          </p>
-        </div>
-        <div class="columns is-centered">
-          <figure>
-            <img src="static/images/t3.png" alt="Table 3">
-            <!-- <figcaption style="text-align:center"><i>Table 3. Overall evaluation of six LVLMs under BLEU, AutoDQ, and FIOVA-DQ.</i></figcaption> -->
-          </figure>
-        </div>
-        <br>
-        
-        <div style="text-align:center">
-          <h2 class="title is-3">Batch Score Evaluation for LVLMs</h2>
-        </div>
-        <div class="content has-text-justified">
-          <br>
-          <p>
-            To complement per-caption metrics, we analyse stability at the batch level using the coefficient of variation (CV). Human annotations are first evaluated across six cognitive dimensions (Consistency, Context, Correctness, Detail Orientation, Temporality, and Length) to obtain per-video CVs. These values define <b>eight cognitive strata (Groups A–H)</b>, ranging from high consensus to high divergence, which act as a graded measure of semantic complexity.
-          </p>
-
-          <div class="columns is-centered">
-            <figure>
-              <img src="static/images/f8.png" alt="Figure 8">
-              <!-- <figcaption style="text-align:center"><i>Figure 8. Comparison of CV rankings between humans and LVLMs across groups (a) and ranking differences (b).</i></figcaption> -->
-            </figure>
-          </div>
-          <br>
-
-          <p>
-            Applying the same CV analysis to LVLM outputs across the linguistic, structural, and cognitive metric families yields model-side stability scores. <b>Figure&nbsp;11</b> reports these results, revealing distinct behavioural strategies: <b>Tarsier</b> prioritises recall and achieves high weighted F1 across most strata, whereas <b>ShareGPT4Video</b> favours precision at the cost of coverage. All models experience pronounced drops in <b>Group&nbsp;H</b>, confirming the difficulty of cognitively complex, low-agreement videos.
-          </p>
-          <p>
-            <b>Figure&nbsp;12</b> further compares the human and model rankings induced by these CV scores. The observed <em>ranking gaps</em> quantify how far model stability patterns drift from human regularities: LVLMs display higher variability on simple videos (Groups A–B), whereas humans diverge more in complex scenarios (Groups F–H). This batch-ranking perspective pinpoints where models revert to template-like summaries instead of mirroring the adaptive diversity of human cognition.
-          </p>
-         
-         <div class="columns is-centered">
-           <figure>
-             <img src="static/images/f11.png" alt="Figure 11">
-             <!-- <figcaption style="text-align:center"><i>Figure 11. Radar plots of LVLM performance across CV-based sub-groups under BLEU, AutoDQ, and FIOVA-DQ metrics.</i></figcaption> -->
-           </figure>
-         </div>
- 
-         <p>
-          Taken together, the CV-based diagnostics highlight the need for cognitively aligned evaluation: even when average scores appear comparable, human–machine stability differences persist across complexity levels, motivating further analysis in the following sections.
-        </p>
-      </div>
-      
-        <div class="columns is-centered">
-          <figure>
-            <img src="static/images/f12.png" alt="Figure 12">
-            <!-- <figcaption style="text-align:center"><i>Figure 8. Comparison of CV rankings between humans and LVLMs across groups (a) and ranking differences (b).</i></figcaption> -->
-          </figure>
-        </div>
-        <br>
-        
-        <div style="text-align:center">
-          <h2 class="title is-3">Evaluation of 9 LVLMs on FIOVA<sub>hard</sub></h2>
-        </div>
-        <div class="content has-text-justified">
-          <br>
-          <p>
-            We evaluate nine LVLMs on <b>FIOVA<sub>hard</sub></b>—Groups F–H with high inter-annotator divergence—to stress-test cognitive robustness. <b>Table&nbsp;5</b> shows that baseline models drop substantially when subjectivity rises: for instance, VideoChat2’s FIOVA-DQ F1 decreases from 0.287 (full set) to 0.234, with Recall falling from 0.243 to 0.180. Video-LLaVA exhibits a similar degradation, revealing difficulty in maintaining narrative continuity across long, ambiguous sequences. In contrast, <b>Tarsier</b> retains recall-oriented resilience (Recall = 0.636) but its Precision (0.152) depresses the overall F1 to 0.262, indicating coverage without filtering cognitively salient content. <b>ShareGPT4Video</b> behaves oppositely—Precision 0.756 but Recall 0.150—reflecting an overly cautious decoding strategy that omits contextual information. These patterns expose the lack of a balancing mechanism between completeness and selectivity under uncertainty.
-         </p>
-         <p>
-            Among large-scale systems, <b>GPT-4o</b> delivers the best cognitive–linguistic balance (FIOVA-DQ F1 = 0.367), sustaining interpretive breadth while preserving precision. <b>InternVL-2.5</b> and <b>Qwen2.5-VL</b> achieve higher precision (0.740 and 0.724) yet lower recall, revealing fact-centric strategies that sacrifice narrative coherence. The comparison underscores that scaling alone does not guarantee adaptability; temporal grounding and reasoning design remain decisive for coping with ambiguous scenes.
-         </p>
-        </div>
-        
-        <div class="columns is-centered">
-          <figure>
-            <img src="static/images/t5.png" alt="Table 5">
-            <!-- <figcaption style="text-align:center"><i>Table 5. Performance of 9 LVLMs on FIOVA<sub>hard</sub> (8-frame input).</i></figcaption> -->
-          </figure>
-        </div>
-        
-        <div class="content has-text-justified">
-          <p>
-            We also vary input length on representative models (Table&nbsp;6). <b>GPT-4o</b> benefits most from temporal expansion: its FIOVA-DQ F1 improves from 0.367 (8 frames) to 0.418 (32 frames), with Recall rising from 0.251 to 0.264. <b>Qwen2.5-VL</b> exhibits a similar upward trend, whereas <b>InternVL-2.5</b> peaks in Precision (0.743) at 32 frames and <b>Tarsier</b> maintains stable Recall (~0.64) across lengths. Longer contexts thus enhance robustness but intensify the Precision–Recall trade-off, revealing each model’s effective cognitive bandwidth.
-          </p>
-        </div>
-        
-        <div class="columns is-centered">
-          <figure>
-            <img src="static/images/t6.png" alt="Table 6">
-            <!-- <figcaption style="text-align:center"><i>Table 6. Frame-length ablation results on FIOVA<sub>hard</sub>.</i></figcaption> -->
-          </figure>
-        </div>
-        <br>
- 
-        <div style="text-align:center">
-          <h2 class="title is-3">Discussion</h2>
-        </div>
-        <div class="content has-text-justified">
-          <br>
-          <p>
-            The multi-layer evaluation reveals a structured performance landscape: LVLMs align along a precision–recall continuum that reflects distinct reasoning preferences. <b>Tarsier</b> pursues recall-oriented coverage (Recall 0.636 on <b>FIOVA<sub>hard</sub></b>) at the expense of cognitive precision, whereas <b>InternVL-2.5</b> and <b>Qwen2.5-VL</b> emphasise factual accuracy (Precision 0.740/0.724) but lose narrative breadth. <b>GPT-4o</b> attains the most balanced F1 (0.367), indicating emergent self-calibration between detail and coherence, yet still falls short of human adaptability.
-          </p>
-          <p>
-            Human preference studies corroborate this picture: FIOVA-DQ (Spearman F1 = 0.579) approximates human rankings far better than AutoDQ (0.125), demonstrating that cognitively weighted scoring captures salience, causality, and contextual relevance—the dimensions humans prioritise when describing long videos.
-          </p>
-          <p>
-            CV-based analyses expose a <em>cognitive compression effect</em>. As ambiguity increases, human annotators diversify their descriptions, whereas LVLMs converge on deterministic, template-like outputs. Caption-length correlation studies (see Appendix) and the ranking gaps in Fig.&nbsp;8 show that models stabilise surface form instead of expanding reasoning pathways, revealing limited meta-cognitive adaptability under uncertainty.
-          </p>
-          <p>
-            Error inspections reinforce this interpretation: ShareGPT4Video hallucinated redundant details, while Tarsier omitted pivotal events, indicating brittle causal abstraction. Models handle low-entropy scenes reliably but collapse in multi-perspective narratives, suggesting reliance on pattern continuity rather than situational inference.
-          </p>
-          <p>
-            Finally, the integrated methodology—traditional metrics, AutoDQ, FIOVA-DQ, and batch-ranking—links measurement with mechanism. It transitions evaluation from aggregate scores to behavioural diagnosis, pinpointing where LVLM stability diverges from human interpretive flexibility and guiding future model design toward cognitively coherent reasoning.
-          </p>
-        </div>
-
-        <br />
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <div style="text-align:center">
-            <h2 class="title is-3">More Specific Examples</h2>
-          </div>
-          <br />
-          
-          <div class="content has-text-justified">
-            <p>
-              The following examples illustrate five common error types in LVLM-generated captions, each highlighted using a specific color:
-            </p>
-          
-            <ul>
-              <li>
-                <span style="color:black;"><b>Omission</b></span>: Critical events or objects in the video are not described by the model.
-                Although such omissions cannot be explicitly highlighted in the output, we provide textual analyses in the annotation to reveal these missing elements.
-              </li>
-              <li>
-                <span style="color:purple;"><b>Misrepresentation</b></span>: The description includes content that is inconsistent with the video.
-                These inaccuracies are <span style="color:purple;"><b>highlighted in purple</b></span>.
-              </li>
-              <li>
-                <span style="color:rgb(255, 200, 0);"><b>Redundancy</b></span>: Repetitions of the same event or information within the caption.
-                Such content is <span style="color:rgb(255, 200, 0);"><b>highlighted in yellow</b></span>.
-              </li>
-              <li>
-                <span style="color:green;"><b>Excessive Extension</b></span>: The model introduces speculative or unnecessary details beyond what is present in the video.
-                These are <span style="color:green;"><b>highlighted in green</b></span>.
-              </li>
-              <li>
-                <span style="color:red;"><b>Hallucination</b></span>: The model generates content entirely absent from the video.
-                These fabricated details are <span style="color:red;"><b>highlighted in red</b></span>.
-              </li>
-            </ul>
-          
-            <p>
-              By categorizing and visualizing these errors, we provide a structured lens for analyzing the reliability of model-generated descriptions, and offer diagnostic insights into improving future LVLM performance.
-            </p>
-          </div>
-          
-
-          <div class="control has-icons-left">
-            <div class="select is-medium is-info is-rounded ">
-              <select id="dropdown" onchange="changeContent()" style="width:auto">
-                <option value="example_1">Example 1</option>
-                <option value="example_2">Example 2</option>
-                <option value="example_3">Example 3</option>
-                <option value="example_4">Example 4</option>
-                <option value="example_5">Example 5</option>
-                <option value="example_6">Example 6</option>
-              </select>
-              <div class="icon is-small is-left">
-                <i class="fas fa-comment-alt"></i>
-              </div>
-            </div>
-         </div>
-          <!--/ Dropdown -->
-
-          <!-- Content -->
-          <div id="example_1" class="content-section">
-            <br />
-            <div class="content has-text-justified">
-              <div class="columns is-centered">
-                <figure>
-                  <img src="static/images/A13.png" alt="Figure A13">
-                </figure>
-            </div>
-              <p>
-                <b>Analysis:</b><br>
-                <pre style="white-space: pre-wrap; word-break: keep-all;">Human performance in video description tasks demonstrates remarkable consistency, especially in simpler scenarios where humans can effectively capture key content and provide accurate descriptions with minimal variation. In contrast, LVLMs exhibit significant limitations in these scenarios, often struggling to identify critical details and failing to match human descriptive ability. This discrepancy stems from the models' inability to fully comprehend the overall context and integrate video events with background information, which are essential for accurate and coherent descriptions. Among the LVLMs, models like LLaVA-NEXT-Video, Video-LLaVA, and VideoChat2 frequently exhibit issues of redundancy in their outputs. ShareGPT4Video shows pronounced hallucinations and repetitive descriptions, further highlighting its challenges in maintaining precision. Tarsier, while avoiding hallucination and excessive redundancy, suffers from omissions, such as neglecting the actions occurring after the boy lies on the ground. These findings underscore the persistent gap between LVLMs and human performance, particularly in scenarios requiring detailed understanding and contextual integration.</pre>
-              </p>
-            </div>
-          </div>
-
-          <div id="example_2" class="content-section"  style="display:none">
-            <br />
-            <div class="content has-text-justified">
-              <div class="columns is-centered">
-                <figure>
-                  <img src="static/images/A14.png" alt="Figure A14">
-                </figure>
-            </div>
-              <p>
-                <b>Analysis:</b><br>
-                <pre style="white-space: pre-wrap; word-break: keep-all;">When video content is straightforward and visually intuitive, such as a person playing baseball or a noticeable change in scenery, there is minimal difference in performance between humans and LVLMs. Both can effectively capture key visual elements and generate accurate descriptions without relying on deep contextual or cultural understanding. This similarity highlights the ability of LVLMs to process intuitive visual information efficiently. However, in videos with frequent camera switches and more complex content, all models exhibit omissions in describing critical events. For example, ShareGPT4Video frequently includes redundant and repetitive descriptions, which detracts from its overall coherence. Furthermore, VideoChat2 demonstrates significant errors by misinterpreting the entire video as children playing, highlighting its limitations in accurately capturing contextual nuances and differentiating between events.</pre>
-              </p>
-            </div>
-          </div>
-
-          <div id="example_3" class="content-section"  style="display:none">
-            <br />
-            <div class="content has-text-justified">
-              <div class="columns is-centered">
-                <figure>
-                  <img src="static/images/A15.png" alt="Figure A15">
-                </figure>
-            </div>
-              <p>
-                <b>Analysis:</b><br>
-                <pre style="white-space: pre-wrap; word-break: keep-all;">Significant semantic variation is evident in human descriptions of this video, underscoring the interpretative challenges posed by its strong artistic elements and intricate narrative structure. This variability stems from differing human perspectives, shaped by personal experiences, cultural backgrounds, and emotional interpretations, making it difficult to achieve consistent descriptive consensus. In contrast, LVLMs exhibit greater consistency in their descriptions but with notable shortcomings. The complexity of the video often overwhelms their ability to focus on specific scene details, leading to issues such as hallucinations, repetitive phrasing, and redundant content. These limitations are particularly evident in ShareGPT4Video, which frequently introduces irrelevant or speculative details, further reducing the coherence and accuracy of its descriptions. The contrast between human and LVLM performance reflects their fundamental differences. Humans naturally bring diverse, subjective viewpoints to complex video descriptions, which enriches their interpretations but decreases consistency. Meanwhile, LVLMs, trained on large datasets to identify and describe widely recognizable visual elements, prioritize consistency and universality over individuality. This standardization allows LVLMs to generate predictable outputs, though at the cost of nuanced understanding in highly artistic or subjective contexts.</pre>
-              </p>
-            </div>
-          </div>
-
-          <div id="example_4" class="content-section"  style="display:none">
-            <br />
-            <div class="content has-text-justified">
-              <div class="columns is-centered">
-                <figure>
-                  <img src="static/images/A16.png" alt="Figure A16">
-                </figure>
-            </div>
-              <p>
-                <b>Analysis:</b><br>
-                <pre style="white-space: pre-wrap; word-break: keep-all;">The models demonstrated relatively poor performance in describing this video, primarily due to the intricate nature of its content. The video depicts a woman immersed in her fantasies, where the scenes transition frequently and contain temporal discontinuities. These features introduce substantial complexity, making it challenging for LVLMs to accurately interpret and coherently describe the video. The detailed elements within the fantasies, combined with the fragmented narrative structure, further exacerbate these challenges, leading to descriptions that are often unclear and lack interpretative depth. All LVLMs exhibited varying degrees of content omissions, failing to capture critical details of the video. Additionally, most models struggled with hallucinations and repetitive descriptions, further compromising the accuracy and coherence of their outputs. These limitations underscore the need for advancements in LVLMs to better handle videos with intricate, discontinuous narratives and rich contextual details.</pre>
-              </p>
-            </div>
-          </div>
-
-
-          <div id="example_5" class="content-section"  style="display:none">
-            <br />
-            <div class="content has-text-justified">
-              <div class="columns is-centered">
-                <figure>
-                  <img src="static/images/A17.png" alt="Figure A17">
-                </figure>
-            </div>
-              <p>
-                <b>Analysis:</b><br>
-                <pre style="white-space: pre-wrap; word-break: keep-all;">The models demonstrated strong descriptive abilities for a video depicting Brazilian Jiu-Jitsu practice. The stable camera work and clear temporal relationships enabled accurate recognition and detailed description of activities and actions. LVLMs typically perform well on videos with simple, well-structured content, as such videos reduce interpretative ambiguity and allow the models to focus on key visual elements, showcasing their strengths in straightforward scenarios with minimal complexity. Despite the overall strong performance, some issues remain. Repetitive descriptions and redundancy were observed across the models, though hallucinations were relatively rare. Interestingly, while most LVLMs successfully identified the martial arts clothing worn by the characters, Video-LLaVA recognized only the color of the clothing without distinguishing its category. These results highlight the strengths and limitations of current LVLMs in processing videos with limited complexity..</pre>
-              </p>
-            </div>
-          </div>
-
-          <div id="example_6" class="content-section"  style="display:none">
-            <br />
-            <div class="content has-text-justified">
-              <div class="columns is-centered">
-                <figure>
-                  <img src="static/images/A18.png" alt="Figure A18">
-                </figure>
-            </div>
-              <p>
-                <b>Analysis:</b><br>
-                <pre style="white-space: pre-wrap; word-break: keep-all;">Among the six LVLMs, ShareGPT4Video demonstrates pronounced hallucination issues, characterized by the generation of extensive redundant and irrelevant content. As shown in the accompanying figure, these shortcomings significantly detract from the model's descriptive precision and coherence, highlighting its challenges in effectively filtering and prioritizing relevant visual information.</pre>
-              </p>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-        
-
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-            <p>
-              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
-                code</a> of this website,
-              we just ask that you link back to this page in the footer.
-              Please remember to remove the analytics code included in the header of the website which
-              you do not want on your website.
-            </p>
-            <p>
-              The templete of this webpage is based on <a href="https://llm-misinformation.github.io/">LLMs Meet Misinformation</a> project, thanks a lot for their good project webpage.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div style="width: 250px; height: 150px; margin: 0 auto; overflow: hidden;">
-    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=IP-BO8eFDnON9-3mPVwUX3KXPP3z9l5gAWRir4U2i7o&cl=ffffff&w=a"></script>
-  </div>
-  
-</body>
-<script>
-  function changeContent() {
-    const dropdown = document.getElementById("dropdown");
-    const selected = dropdown.value;
-    const sections = ["example_1", "example_2", "example_3", "example_4", "example_5", "example_6"];
-
-    sections.forEach((section) => {
-      document.getElementById(section).style.display = (section === selected) ? "block" : "none";
-    });
-  }
-</script>
-
-
-
-
-</html>
+<p>Benchmark and tools maintained by <a href="https://huuuuusy.github.io/">Shiyu Hu</a> and <a href="https://github.com/Xuchen-Li">Xuchen Li</a>.
+</p>
+<details>
+<summary>Project updates
+</summary>
+<ul>
+<li>September 2026: page content aligned with the current manuscript, including twelve-model coverage, revised evaluation results, and event-level examples.
+</li>
+<li>7 November 2025: project content and experimental analyses updated.
+</li>
+<li>15 May 2025: FIOVA homepage released.
+</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p>This website is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. The original page adapted the <a href="https://llm-misinformation.github.io/">LLMs Meet Misinformation</a> and <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> website templates.
+</p><a href="#top">Back to top</a>
+</footer>
+<dialog id="figure-dialog" aria-label="Enlarged figure"><button type="button" id="close-figure" autofocus>Close image</button><img id="enlarged-figure" alt="">
+<p id="figure-description">
+</p>
+</dialog></body></html>
