@@ -64,8 +64,7 @@
 <div><dt>12</dt><dd>evaluated LVLMs</dd>
 </div>
 </dl>
-<p class="version">Results and descriptions aligned with the September 2026 manuscript.
-</p>
+
 </header>
 <section id="overview" class="section">
 <div class="section-head"><span class="eyebrow">Overview</span>
@@ -109,24 +108,21 @@
 </h2>
 </div>
 <div class="prose">
-<p>The dataset contains <strong>3,002 videos across 38 themes</strong>, with an average duration of <strong>33.6 seconds</strong>. Five dynamically assigned annotators independently describe each video using visual information: audio is removed and on-screen text is retained. Human1–Human5 denote caption slots, not five fixed annotators across the dataset.
-</p>
-<p>The collection contains <strong>15,010 human captions and 3,002 UCG references</strong>. Captions pass annotator self-check, third-party verification, and author-team acceptance before entering UCG construction and disagreement analysis. The original captions remain available alongside the consensus reference.
-</p>
+<p>FIOVA contains <strong>3,002 videos across 38 themes</strong>, averaging <strong>33.6 seconds</strong>. Five annotators independently describe each video, capturing different perspectives on the same visual content.</p>
+<p>The collection pairs <strong>15,010 human captions</strong> with <strong>3,002 Unified Consensus Groundtruth (UCG) references</strong>. Each caption undergoes a three-stage quality review.</p>
 </div>
 <figure id="dataset-examples"><a class="figure-link" href="static/images/current/dataset-examples.png" aria-label="Enlarge: Representative FIOVA video scenes"><img src="static/images/current/dataset-examples.png" alt="Representative video scenes from FIOVA, including daily life, sports, nature, animals, and social activities" width="2400" height="919" loading="lazy" decoding="async"></a><figcaption>Representative examples from FIOVA (main-paper Fig. 2), illustrating its thematic and visual diversity. <span class="zoom-hint">Select image to enlarge.</span></figcaption></figure>
 <div class="prose">
 <h3>Eight fixed disagreement strata
 </h3>
-<p>Each human caption is rated for consistency, context, correctness, detail orientation, and temporality; word count supplies the sixth component. For each video, we compute the coefficient of variation across its five captions for each component and average the six CVs equally. Fixed-width intervals define Groups A–H; these are not equal-sized percentile bins.
-</p>
-<p>Group sizes from A to H are <strong>64, 964, 786, 626, 393, 130, 30, and 9</strong>. <strong>FIOVA<sub>hard</sub></strong> contains Groups F–H: <strong>169 videos</strong> with the highest measured disagreement.
-</p>
+<p>We measure annotation variation across five semantic dimensions—consistency, context, correctness, detail, and temporality—plus caption length. Their average coefficient of variation assigns videos to eight disagreement groups, A–H.</p>
+<p><strong>FIOVA<sub>hard</sub></strong> comprises the <strong>169 videos</strong> in Groups F–H, where human descriptions show the greatest disagreement.</p>
 </div>
 <figure><a class="figure-link" href="static/images/current/annotation-groups.png" aria-label="Enlarge: Six annotation components across Groups A–H"><img src="static/images/current/annotation-groups.png" alt="Six annotation components across Groups A–H" loading="lazy" decoding="async" width="1800" height="333"></a>
 <figcaption>Human annotation variability across the eight disagreement strata. <span class="zoom-hint">Select image to enlarge.</span>
 </figcaption>
 </figure>
+<details><summary>Compare dataset reference structures</summary>
 <div class="table-heading">
 <h3>Reference structures across datasets
 </h3>
@@ -175,8 +171,9 @@
 </tbody>
 </table>
 </div>
-<p class="table-note">Reference counts describe captions, not distinct annotator identities. FIOVA combines five independently collected descriptions with UCG. ASR: automatic speech recognition; A/V: audio–visual; w: words. Aligned length follows the captioned moment, event, or step where applicable. VATEX text length refers to English captions; HowTo100M excludes stop words. MSVD statistics and DiDeMo mean lengths follow Panda-70M. † Calculated from aggregate statistics in the original papers. Full source references are listed in manuscript Table I.
+<p class="table-note">ASR: automatic speech recognition; A/V: audio–visual; w: words. Aligned length follows the captioned moment, event, or step where applicable. VATEX text length refers to English captions; HowTo100M excludes stop words. MSVD statistics and DiDeMo mean lengths follow Panda-70M. † Calculated from aggregate statistics in the original papers. Full source references are listed in manuscript Table I.
 </p>
+</details>
 <h3>Video, caption, and vocabulary distributions</h3><figure><a class="figure-link" href="static/images/current/dataset-distribution.png" aria-label="Enlarge: Video, caption, and vocabulary distributions"><img src="static/images/current/dataset-distribution.png" alt="Video, caption, and vocabulary distributions" width="2200" height="1342" loading="lazy" decoding="async"></a><figcaption>Dataset and response statistics: video length, human-caption granularity, caption length versus duration, baseline response lengths, and vocabulary across human captions and UCG. <span class="zoom-hint">Select image to enlarge.</span></figcaption></figure><h3>Human annotation reliability and disagreement strata</h3><figure><a class="figure-link" href="static/images/current/annotation-variability.png" aria-label="Enlarge: Human annotation reliability and disagreement strata"><img src="static/images/current/annotation-variability.png" alt="Human annotation reliability and disagreement strata" width="2200" height="395" loading="lazy" decoding="async"></a><figcaption>Score distributions across the five semantic dimensions and video counts across the eight fixed-width disagreement strata. <span class="zoom-hint">Select image to enlarge.</span></figcaption></figure>
 </section>
 <section id="method" class="section">
@@ -187,37 +184,25 @@
 <div class="prose">
 <h3>A common captioning task
 </h3>
-<p>Six baseline LVLMs are evaluated on the full benchmark: Tarsier, VideoLLaMA2, LLaVA-NeXT-Video, Video-LLaVA, ShareGPT4Video, and VideoChat2. These produce <strong>18,012 video–caption pairs</strong>. All twelve models are evaluated on FIOVA<sub>hard</sub>, adding Tarsier2, InternVL-2.5, InternVL-3, Qwen2.5-VL, GPT-4o, and Gemini-2.5-Flash.
-</p>
-<p>The main comparison uses eight input frames. All models perform the same detailed-captioning task, using the default instruction except for the documented official LLaVA-NeXT-Video prompt. Model-specific input and decoding settings are retained; the maximum output length is 1,024 tokens where interfaces permit. Appendix D-B documents the protocol.
-</p>
+<p>We evaluate six baseline LVLMs on the full benchmark and twelve models on FIOVA<sub>hard</sub>, using eight input frames for the main comparison.</p>
+
 <h3>Three complementary metric families
 </h3>
 <ul class="method-list">
 <li><strong>Lexical metrics:</strong> BLEU, METEOR, and GLEU compare wording with UCG.
 </li>
-<li><strong>AutoDQ:</strong> extracted events are matched with equal weight. Precision measures support for predicted events; Recall measures coverage of reference events.
+<li><strong>AutoDQ:</strong> extracted events are matched with equal weight.
 </li>
-<li><strong>FIOVA-DQ:</strong> the five human-event views guide importance rankings. Borda aggregation produces event weights, normalized separately on the prediction and reference sides.
+<li><strong>FIOVA-DQ:</strong> human descriptions guide event-importance weights, emphasizing events that matter more to the annotators.
 </li>
 </ul>
-<p>Bidirectional matching determines the supported prediction events and covered reference events. FIOVA-DQ sums their weights to obtain Precision and Recall, then takes their harmonic mean for each video's F1. Dataset-level Precision, Recall, and F1 are averaged separately across videos.
-</p>
+<p>Precision measures support for predicted events; Recall measures coverage of reference events. FIOVA-DQ weights both by event importance and combines them through F1.</p>
 </div>
 <figure><a class="figure-link" href="static/images/current/event-weighting.png" aria-label="Enlarge: Worked FIOVA-DQ event weighting and matching example"><img src="static/images/current/event-weighting.png" alt="Worked FIOVA-DQ event weighting and matching example" loading="lazy" decoding="async" width="2400" height="1496"></a>
 <figcaption>Event extraction, human-guided weighting, and bidirectional support matching. <span class="zoom-hint">Select image to enlarge.</span>
 </figcaption>
 </figure>
-<details>
-<summary>What the event scores measure
-</summary>
-<div class="prose">
-<p>The scores measure event support and coverage. They do not independently guarantee correct temporal order: if the extracted events, matches, and weights remain unchanged, reversing an event sequence can leave AutoDQ and FIOVA-DQ unchanged. Lexical metrics and qualitative examples provide complementary views of wording and event relationships.
-</p>
-<p>UCG construction, reference-event extraction, and reference-side weighting are performed offline and reused. Prediction-side parsing, weighting, and matching are performed for each model caption.
-</p>
-</div>
-</details>
+
 </section>
 <section id="results" class="section">
 <div class="section-head"><span class="eyebrow">Benchmark results</span>
@@ -256,8 +241,7 @@
 </tbody>
 </table>
 </div>
-<p class="table-note">F1 is the mean of per-video F1 values, not the harmonic mean of aggregate Precision and Recall. Each metric family is interpreted separately.
-</p>
+<p>Scores are averaged across videos; F1 is computed per video before averaging.</p>
 <div class="prose">
 <p>Tarsier has the highest FIOVA-DQ Precision, Recall, and F1 among the six baselines. VideoChat2 follows in FIOVA-DQ F1. The lexical metrics distinguish other aspects of the captions: VideoChat2 leads in METEOR, while Tarsier leads in BLEU and GLEU.
 </p>
@@ -288,8 +272,7 @@
 </tbody>
 </table>
 </div>
-<p class="table-note">Both metrics use the same videos with defined correlations: 60 for Precision, 57 for Recall, and 58 for F1. The full human-ranking protocol and paired analyses are in Appendix E-B.
-</p>
+<p>See Appendix E-B for the human-ranking protocol and paired analyses.</p>
 <h3>Agreement with human rankings, video by video</h3><figure><a class="figure-link" href="static/images/current/human-agreement.png" aria-label="Enlarge: Paired human-ranking agreement"><img src="static/images/current/human-agreement.png" alt="Per-video Spearman agreement of AutoDQ and FIOVA-DQ with human rankings" width="2951" height="949" loading="lazy" decoding="async"></a><figcaption>Each point compares the two metrics on the same video. Points above the diagonal indicate stronger human alignment for FIOVA-DQ. <span class="zoom-hint">Select image to enlarge.</span></figcaption></figure>
 </section>
 <section id="compression" class="section">
@@ -298,8 +281,7 @@
 </h2>
 </div>
 <div class="prose">
-<p>Batch-Ranking first orders all videos by score separately for each model and metric. It then collects the <strong>same video's rank positions across the six models</strong>, computes their CV, and averages across the nine metrics. This measures relative rank dispersion, rather than mixing raw score scales.
-</p>
+<p>Batch-Ranking ranks videos separately for each model and metric, then compares the <strong>same video’s rank positions across models</strong>. Averaging their relative dispersion across nine metrics reveals how model behavior varies with human disagreement.</p>
 </div>
 <figure><a class="figure-link" href="static/images/current/batch-ranking.png" aria-label="Enlarge: Current Batch-Ranking workflow with per-model video ranking"><img src="static/images/current/batch-ranking.png" alt="Current Batch-Ranking workflow with per-model video ranking" loading="lazy" decoding="async" width="2200" height="1152"></a>
 <figcaption>Batch-Ranking: human disagreement, model-specific video ranks, and their comparison. <span class="zoom-hint">Select image to enlarge.</span>
@@ -308,10 +290,8 @@
 <div class="prose">
 <h3>The complexity compression effect
 </h3>
-<p>Across all 3,002 videos, greater human disagreement is associated with lower model-side relative rank dispersion (<strong>Spearman ρ = −0.179</strong>). Mean model-side rank-CV is <strong>23.0% lower in High (F–H) than in Low (A–B)</strong>. The association remains negative under all six leave-one-component-out definitions, including the variant that excludes caption length.
-</p>
-<p>This is an overall relationship; it does not require every adjacent group to decrease monotonically. All six baselines have lower event Precision, Recall, and F1 in Group H than in Group A. Lower relative rank dispersion therefore accompanies reduced event support and coverage at these endpoints.
-</p>
+<p>Greater human disagreement is associated with lower model-side relative rank dispersion (<strong>Spearman ρ = −0.179</strong>). Mean rank-CV is <strong>23.0% lower in High (F–H) than in Low (A–B)</strong>.</p>
+<p>All six baselines also have lower event Precision, Recall, and F1 in Group H than in Group A, connecting reduced rank dispersion with reduced event support and coverage.</p>
 </div>
 <figure><a class="figure-link" href="static/images/current/rank-dispersion.png" aria-label="Enlarge: Current rank-dispersion results across human disagreement strata"><img src="static/images/current/rank-dispersion.png" alt="Current rank-dispersion results across human disagreement strata" loading="lazy" decoding="async" width="1800" height="706"></a>
 <figcaption>Relative model dispersion, human–model rank differences, and pooled Low/Mid/High comparisons. <span class="zoom-hint">Select image to enlarge.</span>
@@ -383,8 +363,7 @@
 <div class="prose">
 <p>All six baselines have lower FIOVA-DQ Precision, Recall, and F1 on FIOVA<sub>hard</sub> than on the full benchmark. Tarsier's F1 decreases from <strong>0.279 to 0.214</strong>.
 </p>
-<p>Among the additional models, Gemini-2.5-Flash and GPT-4o obtain similar FIOVA-DQ F1 scores (<strong>0.270 and 0.268</strong>), followed by Tarsier2 (<strong>0.247</strong>). GPT-4o has higher Precision than Gemini-2.5-Flash, while their Recall values round to the same value. Similar F1 values can therefore accompany different balances of support and coverage.
-</p>
+<p>Gemini-2.5-Flash and GPT-4o lead in FIOVA-DQ F1 (<strong>0.270 and 0.268</strong>), followed by Tarsier2 (<strong>0.247</strong>).</p>
 <h3>Does adding frames help?
 </h3>
 <p>For FIOVA-DQ F1, GPT-4o and Qwen2.5-VL improve as the frame count increases. Tarsier peaks at 16 frames and then declines; InternVL-2.5 declines across the tested frame counts. The benefit depends on both the model and metric.
@@ -445,7 +424,7 @@
 </section>
 <section id="examples" class="section">
 <div class="section-head"><span class="eyebrow">Dataset demo</span><h2>One video, five descriptions, one consensus</h2></div>
-<div class="prose"><p>Watch a video, compare the five independent human descriptions, and read its UCG. The descriptions are shown as recorded in the example materials. Human 1–5 identify caption slots for the selected video.</p></div>
+<div class="prose"><p>Watch a video, compare five independent human descriptions, and explore their unified consensus reference.</p></div>
 <label for="example-select">Choose a video</label><select id="example-select"><option value="example-bicycle">A boy and his bicycle</option><option value="example-baseball">A baseball game and its spectators</option><option value="example-artistic">Reading, dancing, and changing scenes</option><option value="example-party">A party across several scenes</option><option value="example-martial-arts">A martial-arts demonstration</option><option value="example-conversation">A conversation across alternating shots</option></select>
 <noscript><p>All six videos and their descriptions appear below.</p></noscript>
 <article id="example-bicycle" class="example">
@@ -504,20 +483,7 @@
 <div class="consensus-caption"><h3>Unified Consensus Groundtruth (UCG)</h3><p>A man in a white dress holds a bell and talks to the camera, while another man in a gray coat also speaks. They take turns speaking and shaking the bell. The man in white also holds a microphone and shakes a toy. In a room filled with lanterns, the man takes selfies and holds a walkie-talkie while continuing to talk to the camera.</p></div></div>
 </article>
 </section>
-<section id="discussion" class="section">
-<div class="section-head">
-<h2>What the benchmark helps distinguish
-</h2>
-</div>
-<div class="prose">
-<p>FIOVA separates the support received by predicted events from the coverage of reference events, and uses human descriptions to estimate which events matter more. Human-ranking comparisons assess whether these scores follow human judgments; disagreement strata show how performance changes across videos.
-</p>
-<p>The video demos let readers compare individual descriptions with the consensus reference, including which actions each description selects and how it connects events across scenes.
-</p>
-<p>Possible pretraining overlap remains relevant to interpreting absolute scores and cross-model comparisons. The study does not include a model-specific empirical contamination test; source documentation and construction safeguards are described in Appendix B-A.
-</p>
-</div>
-</section>
+
 <section id="resources" class="section">
 <div class="section-head">
 <h2>Dataset and contact
