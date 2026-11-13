@@ -227,3 +227,28 @@ figure.narrow{max-width:860px;margin-left:auto;margin-right:auto}
 @media(max-width:700px){.kicker{font-size:13px;gap:8px}.kicker span{padding-left:8px}}
 .kicker i{font-style:normal}
 @media(max-width:700px){.wide-only{display:none}}
+/* findings */
+.findings{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:34px 0 8px}
+.finding{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 26px 10px;box-shadow:var(--shadow)}
+.finding .big{font:600 48px/1 var(--display);letter-spacing:-.035em;color:var(--blue-d);margin:0}
+.finding .cmp{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:10px 0 0}
+.finding h3{font-size:18px;margin:20px 0 8px}
+.finding p:last-child{font-size:15.5px;color:var(--ink2)}
+.rank-chart{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 30px 20px}
+.chart-head h3{margin:0}
+.chart-head p{margin:2px 0 18px;font-size:14.5px;color:var(--muted)}
+.bars{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.bars li{display:grid;grid-template-columns:150px 1fr 52px;align-items:center;gap:14px;padding:5px 0;border-radius:6px}
+.bars li:hover{background:var(--panel)}
+.bar-name{font-size:14.5px;color:var(--ink);text-align:right}
+.bar-track{height:14px;position:relative}
+.bar-track::before{content:"";position:absolute;inset:6px 0;background:#eef1f6;border-radius:2px}
+.bar{position:absolute;left:0;top:0;bottom:0;width:calc(var(--v)*100%);background:var(--blue);border-radius:0 4px 4px 0}
+.bars li:hover .bar{background:var(--blue-d)}
+.bar-val{font-size:14.5px;font-variant-numeric:tabular-nums;color:var(--ink2)}
+.rank-chart figcaption{margin:14px 0 0}
+details.more{margin-top:18px}
+details.more+details.more{margin-top:12px}
+details.more>summary{font-size:16.5px}
+@media(max-width:900px){.findings{grid-template-columns:1fr}}
+@media(max-width:700px){.rank-chart{padding:20px 16px 16px}.bars li{grid-template-columns:110px 1fr 44px;gap:10px}.bar-name,.bar-val{font-size:13px}.finding .big{font-size:40px}}
