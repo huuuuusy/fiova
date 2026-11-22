@@ -206,7 +206,7 @@
 </div>
 <div class="prose"><p>Six baseline LVLMs are evaluated on all 3,002 videos and twelve models on FIOVA<sub>hard</sub>, with eight input frames. Three results summarize the benchmark; the full tables and figures are collapsed below.</p></div>
 <div class="findings">
-<article class="finding"><p class="big">0.426</p><p class="cmp">vs 0.264 for AutoDQ</p><h3>Closer to human rankings</h3><p>Forty participants ranked six model captions for each of 60 videos. FIOVA-DQ F1 agrees more closely with their rankings (mean Spearman correlation), and Recall rises from 0.215 to 0.371.</p></article>
+<article class="finding"><p class="big">0.418</p><p class="cmp">vs 0.264 for AutoDQ</p><h3>Closer to human rankings</h3><p>Forty participants ranked six model captions for each of 60 videos. FIOVA-DQ F1 agrees more closely with their rankings (mean Spearman correlation), and Recall rises from 0.215 to 0.344.</p></article>
 <article class="finding"><p class="big">23.0%</p><p class="cmp">lower model rank dispersion</p><h3>Models differ less where people differ more</h3><p>On high-disagreement videos (Groups F–H), the six models place the same video more alike than on low-disagreement videos (A–B); Spearman ρ = −0.179 across 3,002 videos.</p></article>
 <article class="finding"><p class="big">6 / 6</p><p class="cmp">baselines drop on the hard subset</p><h3>Disagreement makes captioning harder</h3><p>Every baseline has lower FIOVA-DQ Precision, Recall, and F1 on the 169 high-disagreement videos than on the full benchmark; Tarsier’s F1 falls from 0.279 to 0.214.</p></article>
 </div>
@@ -276,7 +276,7 @@
 <tbody>
 <tr><th scope="row">AutoDQ</th><td>0.198</td><td>0.215</td><td>0.264</td>
 </tr>
-<tr><th scope="row">FIOVA-DQ</th><td>0.188</td><td>0.371</td><td>0.426</td>
+<tr><th scope="row">FIOVA-DQ</th><td>0.196</td><td>0.344</td><td>0.418</td>
 </tr>
 </tbody>
 </table>
@@ -290,7 +290,7 @@
 </figcaption>
 </figure>
 <div class="prose">
-<h3>The complexity compression effect
+<h3>The complexity compression pattern
 </h3>
 <p>Greater human disagreement is associated with lower model-side relative rank dispersion (<strong>Spearman ρ = −0.179</strong>). Mean rank-CV is <strong>23.0% lower in High (F–H) than in Low (A–B)</strong>.</p>
 <p>All six baselines also have lower event Precision, Recall, and F1 in Group H than in Group A, connecting reduced rank dispersion with reduced event support and coverage.</p>
@@ -489,6 +489,8 @@
 <details>
 <summary><span>Project updates</span></summary>
 <ul>
+<li>November 2026: results aligned with the current manuscript.
+</li>
 <li>September 2026: page content aligned with the current manuscript, including twelve-model coverage, revised evaluation results, and event-level examples.
 </li>
 <li>7 November 2025: project content and experimental analyses updated.
