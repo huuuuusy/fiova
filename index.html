@@ -214,15 +214,14 @@
 <div class="section-head"><span class="eyebrow"><span class="num">04</span>Findings</span>
 <h2>What we found</h2>
 </div>
+<div class="prose"><p>A caption is always judged against someone’s standard. FIOVA takes the standard from a group: five people describe each video, their differences show where interpretations diverge, and their shared content becomes the reference.</p></div>
 <ol class="findings-list">
-<li><h3>People describe the same video differently</h3><p>Five annotators watching the same clip notice different things, split it into different events, and word them differently. How much they disagree varies from video to video, so the 3,002 videos are grouped into eight levels, from Group A (high agreement) to Group H (high divergence).</p></li>
-<li><h3>Their shared content is a better reference than any single description</h3><p>Forty participants ranked eight candidate descriptions for each of 60 videos, and the consensus references (UCG) ranked well above the individual human descriptions. As a reference for scoring models, UCG also gives model rankings close to those obtained with all five descriptions together.</p></li>
-<li><h3>Weighting events by what people find important brings scores closer to human judgment</h3><p>FIOVA-DQ weights each event by its importance in the five human descriptions. Compared with equal weighting, its agreement with human rankings of model captions rises from 0.26 to 0.42 (mean Spearman correlation of F1).</p></li>
-<li><h3>Where people disagree more, models look more alike</h3><p>As human disagreement increases, the six models place the same video more similarly: their rank dispersion falls overall, and is 23% lower on high-disagreement videos than on low-disagreement ones. Model outputs become more alike where human interpretations diverge.</p>
+<li><h3>No single description is the standard</h3><p>Five people describe the same video differently, and how much they differ varies from video to video. Forty participants ranked the shared consensus (UCG) well above any individual description, and it ranks models much as all five descriptions together do.</p></li>
+<li><h3>What people find important should count more</h3><p>Weighting events by their importance in the five descriptions raises agreement with human rankings of model captions from 0.26 to 0.42 (mean Spearman correlation of F1).</p></li>
+<li><h3>Models converge where people diverge</h3><p>On videos where people disagree more, the models place them more alike, with rank dispersion 23% lower than on low-disagreement videos, and every baseline scores lower there.</p>
 <figure class="animation"><a class="figure-link" href="static/animations/03-compare-models.gif" aria-label="Enlarge: Animation: one video in six models’ rankings and rank dispersion across human disagreement"><img src="static/animations/03-compare-models.gif" alt="Animation: one video in six models’ rankings and rank dispersion across human disagreement" loading="lazy" decoding="async" width="1600" height="900"></a>
 <figcaption>Where one video falls in six models’ rankings, and how model rank dispersion changes with human disagreement.</figcaption>
 </figure></li>
-<li><h3>High-disagreement videos are harder for every model</h3><p>All six baselines score lower on the 169 most divergent videos than on the full benchmark, and the best of twelve models reach a FIOVA-DQ F1 of about 0.27 there. Adding frames helps some models but not others.</p></li>
 </ol>
 <p class="findings-more">The complete tables and figures are in the paper. The data, model outputs, and evaluation code are on <a href="https://huggingface.co/datasets/huuuuusy/FIOVA">Hugging Face</a>.</p>
 </section>
