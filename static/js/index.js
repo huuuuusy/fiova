@@ -49,5 +49,5 @@ if (dialog && typeof dialog.showModal === 'function') {
   dialog.addEventListener('close', () => { if (opener) opener.focus({preventScroll:true}); });
 }
 
-// The hero video wall stays on its first frame for visitors who ask for reduced motion.
-document.addEventListener("DOMContentLoaded",()=>{const v=document.querySelector(".hero-wall video");if(v&&matchMedia("(prefers-reduced-motion: reduce)").matches){v.removeAttribute("autoplay");v.pause()}});
+// The banner video wall stays on its first frame for visitors who ask for reduced motion.
+document.addEventListener("DOMContentLoaded",()=>{const v=document.querySelector(".banner-bg");if(v&&matchMedia("(prefers-reduced-motion: reduce)").matches){v.removeAttribute("autoplay");v.pause()}});
