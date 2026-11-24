@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FIOVA — Five-in-One Video Annotations</title><meta name="description" content="FIOVA evaluates video captions using five independent human descriptions, a shared consensus reference, and event-importance weighting. Explore the dataset, methods, and results for twelve LVLMs."><link rel="canonical" href="https://huuuuusy.github.io/fiova/"><meta property="og:title" content="FIOVA — Five-in-One Video Annotations"><meta property="og:description" content="Human diversity and shared consensus for evaluating video captions."><meta property="og:type" content="website"><meta property="og:url" content="https://huuuuusy.github.io/fiova/"><meta property="og:image" content="https://huuuuusy.github.io/fiova/static/images/logo.png"><link rel="icon" href="static/images/logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap"><link rel="stylesheet" href="static/css/index.css?v=20261125c"><script defer src="static/js/index.js?v=20261125c"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FIOVA — Five-in-One Video Annotations</title><meta name="description" content="FIOVA evaluates video captions using five independent human descriptions, a shared consensus reference, and event-importance weighting. Explore the dataset, methods, and results for twelve LVLMs."><link rel="canonical" href="https://huuuuusy.github.io/fiova/"><meta property="og:title" content="FIOVA — Five-in-One Video Annotations"><meta property="og:description" content="Human diversity and shared consensus for evaluating video captions."><meta property="og:type" content="website"><meta property="og:url" content="https://huuuuusy.github.io/fiova/"><meta property="og:image" content="https://huuuuusy.github.io/fiova/static/images/logo.png"><link rel="icon" href="static/images/logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap"><link rel="stylesheet" href="static/css/index.css?v=20261126a"><script defer src="static/js/index.js?v=20261125c"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
 <nav class="nav" aria-label="Main navigation"><a class="wordmark" href="#top"><img src="static/images/logo.png" alt="" width="20" height="30">FIOVA</a>
 <div class="nav-links"><a href="#dataset">Dataset</a><a href="#method">Method</a><a href="#results">Findings</a><a href="#examples">Demo</a><a href="#resources">Resources</a>
 </div>
@@ -212,217 +212,19 @@
 </section>
 <section id="results" class="section alt">
 <div class="section-head"><span class="eyebrow"><span class="num">04</span>Findings</span>
-<h2>What FIOVA reveals</h2>
+<h2>What we found</h2>
 </div>
-<div class="prose"><p>Six baseline LVLMs are evaluated on all 3,002 videos and twelve models on FIOVA<sub>hard</sub>, with eight input frames. Three results summarize the benchmark; the full tables and figures are collapsed below.</p></div>
-<div class="findings">
-<article class="finding"><p class="big">0.418</p><p class="cmp">vs 0.264 for AutoDQ</p><h3>Closer to human rankings</h3><p>Forty participants ranked six model captions for each of 60 videos. FIOVA-DQ F1 agrees more closely with their rankings (mean Spearman correlation), and Recall rises from 0.215 to 0.344.</p></article>
-<article class="finding"><p class="big">23.0%</p><p class="cmp">lower model rank dispersion</p><h3>Models differ less where people differ more</h3><p>On high-disagreement videos (Groups F–H), the six models place the same video more alike than on low-disagreement videos (A–B); Spearman ρ = −0.179 across 3,002 videos.</p></article>
-<article class="finding"><p class="big">6 / 6</p><p class="cmp">baselines drop on the hard subset</p><h3>Disagreement makes captioning harder</h3><p>Every baseline has lower FIOVA-DQ Precision, Recall, and F1 on the 169 high-disagreement videos than on the full benchmark; Tarsier’s F1 falls from 0.279 to 0.214.</p></article>
-</div>
-<figure class="animation"><span class="anim-tag">Animation</span><a class="figure-link" href="static/animations/03-compare-models.gif" aria-label="Enlarge: Animation: one video in six models’ rankings and rank dispersion across human disagreement"><img src="static/animations/03-compare-models.gif" alt="Animation: one video in six models’ rankings and rank dispersion across human disagreement" loading="lazy" decoding="async" width="1600" height="900"></a>
-<figcaption>Batch-Ranking: where one video falls in six models’ rankings, and model rank dispersion across all 3,002 videos and levels of human disagreement.
-</figcaption>
-</figure>
-<figure class="rank-chart"><div class="chart-head"><h3>Twelve LVLMs on FIOVA<sub>hard</sub></h3><p>FIOVA-DQ F1 · 169 high-disagreement videos · 8 frames</p></div>
-<ol class="bars"><li title="Gemini-2.5-Flash: FIOVA-DQ F1 0.270"><span class="bar-name">Gemini-2.5-Flash</span><span class="bar-track"><span class="bar" style="--v:0.9000"></span></span><span class="bar-val">0.270</span></li><li title="GPT-4o: FIOVA-DQ F1 0.268"><span class="bar-name">GPT-4o</span><span class="bar-track"><span class="bar" style="--v:0.8933"></span></span><span class="bar-val">0.268</span></li><li title="Tarsier2: FIOVA-DQ F1 0.247"><span class="bar-name">Tarsier2</span><span class="bar-track"><span class="bar" style="--v:0.8233"></span></span><span class="bar-val">0.247</span></li><li title="Tarsier: FIOVA-DQ F1 0.214"><span class="bar-name">Tarsier</span><span class="bar-track"><span class="bar" style="--v:0.7133"></span></span><span class="bar-val">0.214</span></li><li title="InternVL-2.5: FIOVA-DQ F1 0.207"><span class="bar-name">InternVL-2.5</span><span class="bar-track"><span class="bar" style="--v:0.6900"></span></span><span class="bar-val">0.207</span></li><li title="Qwen2.5-VL: FIOVA-DQ F1 0.199"><span class="bar-name">Qwen2.5-VL</span><span class="bar-track"><span class="bar" style="--v:0.6633"></span></span><span class="bar-val">0.199</span></li><li title="InternVL-3: FIOVA-DQ F1 0.181"><span class="bar-name">InternVL-3</span><span class="bar-track"><span class="bar" style="--v:0.6033"></span></span><span class="bar-val">0.181</span></li><li title="VideoChat2: FIOVA-DQ F1 0.179"><span class="bar-name">VideoChat2</span><span class="bar-track"><span class="bar" style="--v:0.5967"></span></span><span class="bar-val">0.179</span></li><li title="LLaVA-NeXT-Video: FIOVA-DQ F1 0.157"><span class="bar-name">LLaVA-NeXT-Video</span><span class="bar-track"><span class="bar" style="--v:0.5233"></span></span><span class="bar-val">0.157</span></li><li title="VideoLLaMA2: FIOVA-DQ F1 0.155"><span class="bar-name">VideoLLaMA2</span><span class="bar-track"><span class="bar" style="--v:0.5167"></span></span><span class="bar-val">0.155</span></li><li title="ShareGPT4Video: FIOVA-DQ F1 0.127"><span class="bar-name">ShareGPT4Video</span><span class="bar-track"><span class="bar" style="--v:0.4233"></span></span><span class="bar-val">0.127</span></li><li title="Video-LLaVA: FIOVA-DQ F1 0.118"><span class="bar-name">Video-LLaVA</span><span class="bar-track"><span class="bar" style="--v:0.3933"></span></span><span class="bar-val">0.118</span></li></ol>
-<figcaption>Manuscript Table V. The complete table, with lexical and AutoDQ scores, is in “Full results on FIOVA<sub>hard</sub>” below.</figcaption></figure>
-<details class="more"><summary><span>Full-benchmark results and agreement with human rankings</span></summary>
-<div class="table-heading">
-<h3>Six baselines · 3,002 videos · 8 frames
-</h3>
-</div>
-<p class="scroll-hint">Swipe or scroll horizontally to view all columns.
-</p>
-<div class="table-scroll" role="region" aria-label="Six baselines · 3,002 videos · 8 frames" tabindex="0">
-<table id="table-full-benchmark">
-<caption>Manuscript Table III. Higher is better for each metric.
-</caption>
-<thead>
-<tr><th rowspan="2" scope="col">Model</th><th colspan="3" scope="colgroup">Lexical</th><th colspan="3" scope="colgroup">AutoDQ</th><th colspan="3" scope="colgroup">FIOVA-DQ</th>
-</tr>
-<tr><th scope="col">BLEU</th><th scope="col">METEOR</th><th scope="col">GLEU</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th>
-</tr>
-</thead>
-<tbody>
-<tr><th scope="row">Tarsier</th><td>0.043</td><td>0.265</td><td>0.119</td><td>0.372</td><td>0.283</td><td>0.284</td><td>0.416</td><td>0.285</td><td>0.279</td>
-</tr>
-<tr><th scope="row">VideoLLaMA2</th><td>0.030</td><td>0.268</td><td>0.088</td><td>0.320</td><td>0.245</td><td>0.236</td><td>0.355</td><td>0.250</td><td>0.239</td>
-</tr>
-<tr><th scope="row">LLaVA-NeXT-Video</th><td>0.020</td><td>0.270</td><td>0.060</td><td>0.326</td><td>0.221</td><td>0.224</td><td>0.356</td><td>0.229</td><td>0.227</td>
-</tr>
-<tr><th scope="row">Video-LLaVA</th><td>0.027</td><td>0.257</td><td>0.077</td><td>0.291</td><td>0.208</td><td>0.199</td><td>0.320</td><td>0.216</td><td>0.198</td>
-</tr>
-<tr><th scope="row">ShareGPT4Video</th><td>0.010</td><td>0.218</td><td>0.034</td><td>0.269</td><td>0.201</td><td>0.185</td><td>0.286</td><td>0.203</td><td>0.174</td>
-</tr>
-<tr><th scope="row">VideoChat2</th><td>0.037</td><td>0.281</td><td>0.098</td><td>0.344</td><td>0.237</td><td>0.239</td><td>0.379</td><td>0.243</td><td>0.241</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Scores are averaged across videos; F1 is computed per video before averaging.</p>
-<div class="prose">
-<p>Tarsier has the highest FIOVA-DQ Precision, Recall, and F1 among the six baselines. VideoChat2 follows in FIOVA-DQ F1. The lexical metrics distinguish other aspects of the captions: VideoChat2 leads in METEOR, while Tarsier leads in BLEU and GLEU.
-</p>
-<h3>Agreement with human preferences
-</h3>
-<p>Forty participants rank six model captions for each of 60 videos. Comparing metric rankings with the aggregate human ranking shows stronger agreement for FIOVA-DQ in <strong>Recall and F1</strong>; Precision-based agreement is similar between the two metrics.
-</p>
-</div>
-<div class="table-heading">
-<h3>Mean Spearman correlation with human rankings
-</h3>
-</div>
-<p class="scroll-hint">Swipe or scroll horizontally to view all columns.
-</p>
-<div class="table-scroll" role="region" aria-label="Mean Spearman correlation with human rankings" tabindex="0">
-<table id="table-human-agreement">
-<caption>Manuscript Table IV and Appendix E-B.
-</caption>
-<thead>
-<tr><th scope="col">Metric</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th>
-</tr>
-</thead>
-<tbody>
-<tr><th scope="row">AutoDQ</th><td>0.198</td><td>0.215</td><td>0.264</td>
-</tr>
-<tr><th scope="row">FIOVA-DQ</th><td>0.196</td><td>0.344</td><td>0.418</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>See Appendix E-B for the human-ranking protocol and paired analyses.</p>
-<h3>Agreement with human rankings, video by video</h3><figure><a class="figure-link" href="static/images/current/human-agreement.png" aria-label="Enlarge: Paired human-ranking agreement"><img src="static/images/current/human-agreement.png" alt="Per-video Spearman agreement of AutoDQ and FIOVA-DQ with human rankings" width="2951" height="949" loading="lazy" decoding="async"></a><figcaption>Each point compares the two metrics on the same video. Points above the diagonal indicate stronger human alignment for FIOVA-DQ.</figcaption></figure>
-</details>
-<details class="more"><summary><span>Batch-Ranking analysis figures</span></summary>
-<figure><a class="figure-link" href="static/images/current/batch-ranking.png" aria-label="Enlarge: Current Batch-Ranking workflow with per-model video ranking"><img src="static/images/current/batch-ranking.png" alt="Current Batch-Ranking workflow with per-model video ranking" loading="lazy" decoding="async" width="2200" height="1152"></a>
-<figcaption>Batch-Ranking: human disagreement, model-specific video ranks, and their comparison.
-</figcaption>
-</figure>
-<div class="prose">
-<h3>The complexity compression pattern
-</h3>
-<p>Greater human disagreement is associated with lower model-side relative rank dispersion (<strong>Spearman ρ = −0.179</strong>). Mean rank-CV is <strong>23.0% lower in High (F–H) than in Low (A–B)</strong>.</p>
-<p>All six baselines also have lower event Precision, Recall, and F1 in Group H than in Group A, connecting reduced rank dispersion with reduced event support and coverage.</p>
-</div>
-<figure><a class="figure-link" href="static/images/current/rank-dispersion.png" aria-label="Enlarge: Current rank-dispersion results across human disagreement strata"><img src="static/images/current/rank-dispersion.png" alt="Current rank-dispersion results across human disagreement strata" loading="lazy" decoding="async" width="1800" height="706"></a>
-<figcaption>Relative model dispersion, human–model rank differences, and pooled Low/Mid/High comparisons.
-</figcaption>
-</figure>
-<h3>Caption length provides another view</h3>
-<figure class="narrow"><a class="figure-link" href="static/images/current/caption-length.png" aria-label="Enlarge: Correlations between model and human-caption lengths"><img src="static/images/current/caption-length.png" alt="Correlations between model and human-caption lengths" loading="lazy" decoding="async" width="1600" height="1078"></a>
-<figcaption>Description-length correlations across videos, computed separately within Groups A–H. Human1–Human5 are caption slots.
-</figcaption>
-</figure>
-<h3>Model scores across the full dataset and Groups A–H</h3><figure class="narrow"><a class="figure-link" href="static/images/current/group-performance.png" aria-label="Enlarge: Model scores across the full dataset and Groups A–H"><img src="static/images/current/group-performance.png" alt="Model scores across the full dataset and Groups A–H" width="2200" height="1932" loading="lazy" decoding="async"></a><figcaption>Six baseline models across the full benchmark and its disagreement strata. Precision, Recall, and F1 are lower in Group H than Group A for all six models, with local reversals in intermediate groups.</figcaption></figure>
-</details>
-<details class="more"><summary><span>Full results on FIOVA<sub>hard</sub> and frame counts</span></summary>
-<div class="table-heading">
-<h3>High-disagreement subset · 169 videos · 8 frames
-</h3>
-</div>
-<p class="scroll-hint">Swipe or scroll horizontally to view all columns.
-</p>
-<div class="table-scroll" role="region" aria-label="High-disagreement subset · 169 videos · 8 frames" tabindex="0">
-<table id="table-hard-8frames">
-<caption>Manuscript Table V. The six additional models are shown separately from the six full-benchmark baselines.
-</caption>
-<thead>
-<tr><th rowspan="2" scope="col">Model</th><th colspan="3" scope="colgroup">Lexical</th><th colspan="3" scope="colgroup">AutoDQ</th><th colspan="3" scope="colgroup">FIOVA-DQ</th>
-</tr>
-<tr><th scope="col">BLEU</th><th scope="col">METEOR</th><th scope="col">GLEU</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th>
-</tr>
-</thead>
-<tbody>
-<tr class="group-row"><th colspan="10">Six full-benchmark baselines</th>
-</tr>
-<tr><th scope="row">Tarsier</th><td>0.040</td><td>0.258</td><td>0.116</td><td>0.348</td><td>0.222</td><td>0.236</td><td>0.364</td><td>0.210</td><td>0.214</td>
-</tr>
-<tr><th scope="row">VideoLLaMA2</th><td>0.026</td><td>0.259</td><td>0.085</td><td>0.265</td><td>0.171</td><td>0.165</td><td>0.294</td><td>0.164</td><td>0.155</td>
-</tr>
-<tr><th scope="row">LLaVA-NeXT-Video</th><td>0.020</td><td>0.264</td><td>0.062</td><td>0.294</td><td>0.156</td><td>0.163</td><td>0.323</td><td>0.152</td><td>0.157</td>
-</tr>
-<tr><th scope="row">Video-LLaVA</th><td>0.023</td><td>0.242</td><td>0.072</td><td>0.204</td><td>0.151</td><td>0.125</td><td>0.216</td><td>0.156</td><td>0.118</td>
-</tr>
-<tr><th scope="row">ShareGPT4Video</th><td>0.009</td><td>0.210</td><td>0.031</td><td>0.241</td><td>0.146</td><td>0.137</td><td>0.244</td><td>0.150</td><td>0.127</td>
-</tr>
-<tr><th scope="row">VideoChat2</th><td>0.032</td><td>0.268</td><td>0.095</td><td>0.293</td><td>0.185</td><td>0.187</td><td>0.317</td><td>0.180</td><td>0.179</td>
-</tr>
-<tr class="group-row"><th colspan="10">Six additional models</th>
-</tr>
-<tr><th scope="row">Tarsier2</th><td>0.048</td><td>0.272</td><td>0.128</td><td>0.299</td><td>0.225</td><td>0.212</td><td>0.389</td><td>0.273</td><td>0.247</td>
-</tr>
-<tr><th scope="row">InternVL-2.5</th><td>0.015</td><td>0.245</td><td>0.073</td><td>0.252</td><td>0.203</td><td>0.185</td><td>0.311</td><td>0.240</td><td>0.207</td>
-</tr>
-<tr><th scope="row">InternVL-3</th><td>0.016</td><td>0.248</td><td>0.075</td><td>0.224</td><td>0.204</td><td>0.175</td><td>0.276</td><td>0.221</td><td>0.181</td>
-</tr>
-<tr><th scope="row">Qwen2.5-VL</th><td>0.017</td><td>0.250</td><td>0.076</td><td>0.309</td><td>0.187</td><td>0.187</td><td>0.366</td><td>0.213</td><td>0.199</td>
-</tr>
-<tr><th scope="row">GPT-4o</th><td>0.023</td><td>0.262</td><td>0.087</td><td>0.296</td><td>0.243</td><td>0.231</td><td>0.390</td><td>0.296</td><td>0.268</td>
-</tr>
-<tr><th scope="row">Gemini-2.5-Flash</th><td>0.021</td><td>0.259</td><td>0.082</td><td>0.292</td><td>0.245</td><td>0.227</td><td>0.369</td><td>0.296</td><td>0.270</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="prose">
-<p>All six baselines have lower FIOVA-DQ Precision, Recall, and F1 on FIOVA<sub>hard</sub> than on the full benchmark. Tarsier's F1 decreases from <strong>0.279 to 0.214</strong>.
-</p>
-<p>Gemini-2.5-Flash and GPT-4o lead in FIOVA-DQ F1 (<strong>0.270 and 0.268</strong>), followed by Tarsier2 (<strong>0.247</strong>).</p>
-<h3>Does adding frames help?
-</h3>
-<p>For FIOVA-DQ F1, GPT-4o and Qwen2.5-VL improve as the frame count increases. Tarsier peaks at 16 frames and then declines; InternVL-2.5 declines across the tested frame counts. The benefit depends on both the model and metric.
-</p>
-</div>
-<figure class="narrow"><a class="figure-link" href="static/images/current/frame-count.png" aria-label="Enlarge: Current frame-count comparison"><img src="static/images/current/frame-count.png" alt="Current frame-count comparison" loading="lazy" decoding="async" width="1800" height="1749"></a>
-<figcaption>Eight-, sixteen-, and thirty-two-frame comparisons for four models across nine metrics.
-</figcaption>
-</figure>
-<div class="table-heading">
-<h3>Four models · three frame counts
-</h3>
-</div>
-<p class="scroll-hint">Swipe or scroll horizontally to view all columns.
-</p>
-<div class="table-scroll" role="region" aria-label="Four models · three frame counts" tabindex="0">
-<table id="table-frame-count">
-<caption>Appendix Table A6. Mean scores across FIOVA<sub>hard</sub> videos.
-</caption>
-<thead>
-<tr><th rowspan="2" scope="col">Model</th><th rowspan="2" scope="col">Frames</th><th colspan="3" scope="colgroup">Lexical</th><th colspan="3" scope="colgroup">AutoDQ</th><th colspan="3" scope="colgroup">FIOVA-DQ</th>
-</tr>
-<tr><th scope="col">BLEU</th><th scope="col">METEOR</th><th scope="col">GLEU</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th>
-</tr>
-</thead>
-<tbody>
-<tr><th scope="row">Tarsier</th><td>8</td><td>0.040</td><td>0.258</td><td>0.116</td><td>0.348</td><td>0.222</td><td>0.236</td><td>0.364</td><td>0.210</td><td>0.214</td>
-</tr>
-<tr><th scope="row">Tarsier</th><td>16</td><td>0.046</td><td>0.280</td><td>0.117</td><td>0.301</td><td>0.247</td><td>0.235</td><td>0.377</td><td>0.293</td><td>0.272</td>
-</tr>
-<tr><th scope="row">Tarsier</th><td>32</td><td>0.044</td><td>0.280</td><td>0.115</td><td>0.266</td><td>0.233</td><td>0.213</td><td>0.336</td><td>0.258</td><td>0.224</td>
-</tr>
-<tr><th scope="row">InternVL-2.5</th><td>8</td><td>0.015</td><td>0.245</td><td>0.073</td><td>0.252</td><td>0.203</td><td>0.185</td><td>0.311</td><td>0.240</td><td>0.207</td>
-</tr>
-<tr><th scope="row">InternVL-2.5</th><td>16</td><td>0.017</td><td>0.252</td><td>0.075</td><td>0.249</td><td>0.190</td><td>0.175</td><td>0.328</td><td>0.225</td><td>0.203</td>
-</tr>
-<tr><th scope="row">InternVL-2.5</th><td>32</td><td>0.014</td><td>0.249</td><td>0.072</td><td>0.239</td><td>0.201</td><td>0.171</td><td>0.308</td><td>0.230</td><td>0.186</td>
-</tr>
-<tr><th scope="row">Qwen2.5-VL</th><td>8</td><td>0.017</td><td>0.250</td><td>0.076</td><td>0.309</td><td>0.187</td><td>0.187</td><td>0.366</td><td>0.213</td><td>0.199</td>
-</tr>
-<tr><th scope="row">Qwen2.5-VL</th><td>16</td><td>0.022</td><td>0.263</td><td>0.082</td><td>0.278</td><td>0.194</td><td>0.185</td><td>0.343</td><td>0.229</td><td>0.207</td>
-</tr>
-<tr><th scope="row">Qwen2.5-VL</th><td>32</td><td>0.022</td><td>0.275</td><td>0.079</td><td>0.305</td><td>0.204</td><td>0.201</td><td>0.378</td><td>0.241</td><td>0.226</td>
-</tr>
-<tr><th scope="row">GPT-4o</th><td>8</td><td>0.023</td><td>0.262</td><td>0.087</td><td>0.296</td><td>0.243</td><td>0.231</td><td>0.390</td><td>0.296</td><td>0.268</td>
-</tr>
-<tr><th scope="row">GPT-4o</th><td>16</td><td>0.019</td><td>0.272</td><td>0.059</td><td>0.307</td><td>0.276</td><td>0.254</td><td>0.378</td><td>0.325</td><td>0.294</td>
-</tr>
-<tr><th scope="row">GPT-4o</th><td>32</td><td>0.016</td><td>0.269</td><td>0.057</td><td>0.314</td><td>0.279</td><td>0.256</td><td>0.394</td><td>0.327</td><td>0.298</td>
-</tr>
-</tbody>
-</table>
-</div>
-</details>
+<ol class="findings-list">
+<li><h3>People describe the same video differently</h3><p>Five annotators watching the same clip notice different things, split it into different events, and word them differently. How much they disagree varies from video to video, so the 3,002 videos are grouped into eight levels, from Group A (high agreement) to Group H (high divergence).</p></li>
+<li><h3>Their shared content is a better reference than any single description</h3><p>Forty participants ranked eight candidate descriptions for each of 60 videos, and the consensus references (UCG) ranked well above the individual human descriptions. As a reference for scoring models, UCG also gives model rankings close to those obtained with all five descriptions together.</p></li>
+<li><h3>Weighting events by what people find important brings scores closer to human judgment</h3><p>FIOVA-DQ weights each event by its importance in the five human descriptions. Compared with equal weighting, its agreement with human rankings of model captions rises from 0.26 to 0.42 (mean Spearman correlation of F1).</p></li>
+<li><h3>Where people disagree more, models look more alike</h3><p>As human disagreement increases, the six models place the same video more similarly: their rank dispersion falls overall, and is 23% lower on high-disagreement videos than on low-disagreement ones. Model outputs become more alike where human interpretations diverge.</p>
+<figure class="animation"><a class="figure-link" href="static/animations/03-compare-models.gif" aria-label="Enlarge: Animation: one video in six models’ rankings and rank dispersion across human disagreement"><img src="static/animations/03-compare-models.gif" alt="Animation: one video in six models’ rankings and rank dispersion across human disagreement" loading="lazy" decoding="async" width="1600" height="900"></a>
+<figcaption>Where one video falls in six models’ rankings, and how model rank dispersion changes with human disagreement.</figcaption>
+</figure></li>
+<li><h3>High-disagreement videos are harder for every model</h3><p>All six baselines score lower on the 169 most divergent videos than on the full benchmark, and the best of twelve models reach a FIOVA-DQ F1 of about 0.27 there. Adding frames helps some models but not others.</p></li>
+</ol>
+<p class="findings-more">The complete tables and figures are in the paper. The data, model outputs, and evaluation code are on <a href="https://huggingface.co/datasets/huuuuusy/FIOVA">Hugging Face</a>.</p>
 </section>
 <section id="examples" class="section">
 <div class="section-head"><span class="eyebrow"><span class="num">05</span>Dataset demo</span><h2>One video, five descriptions, one consensus</h2></div>
